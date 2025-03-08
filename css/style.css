@@ -653,7 +653,7 @@ a {
 .testimoni-section {
   background-color: white;
   color: black;
-  padding: 100px 20px;
+  padding: 100px 0;
   text-align: center;
 }
 
@@ -756,9 +756,8 @@ a {
 
 .carousel-buttons {
   display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-
+  justify-content: space-between;;
+  margin: 10px 100px;
 }
 
 .carousel-button {
@@ -773,20 +772,25 @@ a {
   justify: content-between;
   display: flex;
   cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid #757575;
   transition: all 0.3s ease;
   margin: 0 10px;
   z-index: 10;
 }
 
 .carousel-button:hover {
-  background-color: #f0f0f0;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-background);
 }
 
 .carousel-button svg {
   width: 24px;
   height: 24px;
-  fill: #333;
+  fill: #757575;
+}
+
+.carousel-button:hover svg {
+  fill: white;
 }
 
 .carousel-indicators {
@@ -919,7 +923,66 @@ a {
   height: 20px;
 }
 
+@media (max-width: 1400px) {
+  /* Hero Section */
+  .left {
+    flex: 1;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .left h1 {
+    font-size: 5em;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    font-weight: 400;
+  }
+  
+  .left p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
 
+  .hero-image {
+    max-width: 550px;
+    height: auto;
+    border-radius: 10px;
+    position: relative; /* Menambahkan posisi relatif untuk gambar */
+    z-index: 2; /* Memastikan gambar berada di atas shadow */
+    bottom: 20px; /* Memindahkan gambar sedikit ke bawah */
+  }
+
+  .circle-container {
+    display: flex;
+    width: 250px;
+    height: 250px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom , white, var(--color-background), var(--color-background), white);
+  }
+  
+  .circle {
+    width: 99.5%;
+    height: 99.5%;
+    padding: 0px 50px;
+    background-color: var(--color-background);
+    border-radius: inherit;
+  }
+  
+  .circle-image {
+    width: 120px;
+    height: 120px;;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  
+}
 
 
 @media (max-width: 768px) {
