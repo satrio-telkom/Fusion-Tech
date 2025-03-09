@@ -23,7 +23,7 @@ body {
 }
 
 
-.navbar {
+  .navbar {
     padding: 10px 20px;
     position: relative;
     z-index: 1000;
@@ -67,6 +67,20 @@ body {
   .navbar a.active {
     border-bottom: 2px solid var(--color-primary);
     font-weight: 600;
+  }
+
+  .navbar-mobile-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .navbar-mobile-toggle img {
+    width: 25px;
+    height: 25px;
   }
 
   /* CALCULATOR */
@@ -291,20 +305,6 @@ body {
   .social-icons img {
     width: 22px;
     height: 22px;
-  }
-
-  .navbar-mobile-toggle {
-    display: none;
-    background: transparent;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-  }
-
-  .navbar-mobile-toggle img {
-    width: 25px;
-    height: 25px;
   }
 
   @media (max-width: 1500px) {
