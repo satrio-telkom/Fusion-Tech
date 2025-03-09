@@ -392,7 +392,6 @@ a {
 .trash-care-section .card-content {
   display: flex;
   flex-direction: column;
-
 }
 
 .ddown {
@@ -416,7 +415,7 @@ a {
 
 .trash-care-section .accordion-title {
   margin-top: 10px;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 500;
   text-align: left;
 }
@@ -465,11 +464,12 @@ a {
   border-radius: 24px;
   width: 100%;
   height: 400px;
-  transition: background 0.8s ease-in-out; /* Menambahkan transisi background dengan durasi lebih halus */
+  transition: background 0.4s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .trash-recycle-section .card:hover {
-  background: radial-gradient(circle at bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05)); /* Radial gradient pada hover */
+  background: radial-gradient(circle at bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
+  transform: translateY(-5px); 
 }
 
 
@@ -589,20 +589,19 @@ a {
   content: "";
   position: absolute;
   top: 0px;
-  left: 10%;
-  width: 80%;
+  left: 4%;
+  width: 92%;
   height: 2px;
   background-color: rgba(255, 255, 255, 0.5); /* Garis putih transparan */
 }
-
 
 .footer-container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  max-width: 1200px;
-  margin: auto auto 50px auto;
+  max-width: 1400px;
+  margin: auto auto auto auto;
 }
 
 .footer-section {
