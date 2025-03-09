@@ -66,20 +66,6 @@ function calculate() {
   calculated = true;
 }
 
-// Toggle sidebar di mobile
-document.getElementById("burger-menu").addEventListener("click", function() {
-  document.getElementById("sidebar").classList.toggle("open");
-  document.getElementById("overlay").classList.toggle("open");
-  this.classList.toggle("open");
-});
-
-// Menutup sidebar ketika overlay diklik
-document.getElementById("overlay").addEventListener("click", function() {
-  document.getElementById("sidebar").classList.remove("open");
-  document.getElementById("overlay").classList.remove("open");
-  document.getElementById("burger-menu").classList.remove("open");
-});
-
 // Menambahkan event listener untuk kategori
 const categories = document.querySelectorAll('.category');
 categories.forEach(category => {
@@ -93,20 +79,37 @@ categories.forEach(category => {
     // Mengatur tarif dan nama kategori baru
     currentCategoryName = this.getAttribute('data-name');
     
+    // Mengambil nilai harga dari teks kategori
+    const priceText = this.querySelector('span:last-child').textContent;
+    const rateMatch = priceText.match(/Rp\s*([\d.,]+)\/kg/);
+    if (rateMatch && rateMatch[1]) {
+      // Mengonversi teks harga ke angka
+      currentRate = parseFloat(rateMatch[1].replace(/\./g, '').replace(',', '.'));
+    }
+    
     // Memperbarui nama kategori yang dipilih
-    document.getElementById("selected-category").textContent = 
-      `${currentCategoryName}`;
+    document.getElementById("selected-category").textContent = currentCategoryName;
     
     // Menghitung ulang harga
     calculatePrice();
-    
-    // Jika di mobile, tutup sidebar setelah memilih kategori
-    if (window.innerWidth <= 768) {
-      document.getElementById("sidebar").classList.remove("open");
-      document.getElementById("overlay").classList.remove("open");
-      document.getElementById("burger-menu").classList.remove("open");
-    }
   });
+});
+
+// Menambahkan event listener untuk input dari keyboard
+document.addEventListener("keydown", function(event) {
+  const key = event.key;
+
+  if (!isNaN(key) && key !== " ") { // Memeriksa apakah tombol yang ditekan adalah angka
+    appendNumber(key);
+  } else if (key === ".") { // Memeriksa apakah tombol yang ditekan adalah titik desimal
+    appendDecimal();
+  } else if (key === "Delete") { // Memeriksa apakah tombol yang ditekan adalah Delete
+    clearAll();
+  } else if (key === "Backspace") { // Memeriksa apakah tombol yang ditekan adalah backspace
+    deleteNumber();
+  } else if (key === "Enter") { // Memeriksa apakah tombol yang ditekan adalah enter
+    calculate();
+  }
 });
 
 // Inisialisasi tampilan
