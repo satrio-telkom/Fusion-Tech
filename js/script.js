@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const prevButton = document.querySelector('.prev');
     const carouselWrapper = document.querySelector('.carousel-wrapper');
     
-    let currentIndex = 1; // Starting with the green card (middle slide)
+    let currentIndex = 2; // Starting with the green card (middle slide)
     const slideWidth = 600; // Width of each slide
     const slideGap = 20; // Gap between slides
     

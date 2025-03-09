@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenify</title>
+    <link rel="stylesheet" href="./css/calculator.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <a href="#" class="navbar-logo">Greenify</a>
+                <ul class="navbar-menu">
+                    <li><a href="index.html" class="navbar-link">Home</a></li>
+                    <li><a href="belajar.html" class="navbar-link">Belajar</a></li>
+                    <li><a href="calculator.html" class="navbar-link active">Hitung Cepat</a></li>
+                    <li><a href="pd.html" class="navbar-link">Pasar Digital</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="burger-menu" id="burger-menu">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+          </div>
+          
+          <div class="overlay" id="overlay"></div>
+          
+          <div class="container" data-aos="zoom-in" data-aos-duration="1000">
+            <div class="sidebar" id="sidebar">
+              <div class="category active" data-name="Kantong Kresek">
+                <span>Kantong Kresek</span>
+                <span>Rp 100/kg</span>
+              </div>
+              <div class="category" data-name="Plastik Putih (PP)">
+                <span>Plastik Putih (PP)</span>
+                <span>Rp 100/kg</span>
+              </div>
+              <div class="category" data-name="Plastik Daur Ulang">
+                <span>Plastik Daur Ulang</span>
+                <span>Rp 100/kg</span>
+              </div>
+              <div class="category" data-name="Koran">
+                <span>Koran</span>
+                <span>Rp 720/kg</span>
+              </div>
+              <div class="category" data-name="Kardus">
+                <span>Kardus</span>
+                <span>Rp 1.080/kg</span>
+              </div>
+              <div class="category" data-name="Buku Tulis">
+                <span>Buku Tulis</span>
+                <span>Rp 900/kg</span>
+              </div>
+              <div class="category" data-name="Baja">
+                <span>Baja</span>
+                <span>Rp 1.500/kg</span>
+              </div>
+              <div class="category" data-name="Kaleng">
+                <span>Kaleng</span>
+                <span>Rp 1.500/kg</span>
+              </div>
+              <div class="category" data-name="Tembaga">
+                <span>Tembaga</span>
+                <span>Rp 45.000/kg</span>
+              </div>
+            </div>
+            
+            <div class="main-content">
+              <div class="calculator">
+                <div class="selected-category" id="selected-category">
+                  Kantong Kresek
+                </div>
+                
+                <div class="display">
+                  <div class="display-row">
+                    <div>
+                      <div class="display-label">Berat</div>
+                      <div class="display-value" id="weight-display">0</div>
+                    </div>
+                    <div>
+                      <div class="display-label">Satuan</div>
+                      <div class="display-value" id="kilogram">KG</div>
+                    </div>
+                  </div>
+                  <div class="display-row">
+                    <div>
+                      <div class="display-label">Total</div>
+                      <div class="display-value" id="price-display">Rp 0</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="keypad">
+                  <a class="key" onclick="appendNumber(6)">6</a>
+                  <a class="key" onclick="appendNumber(7)">7</a>
+                  <a class="key" onclick="appendNumber(8)">8</a>
+                  <a class="key" onclick="appendNumber(9)">9</a>
+                  
+                  <a class="key" onclick="appendNumber(3)">3</a>
+                  <a class="key" onclick="appendNumber(4)">4</a>
+                  <a class="key" onclick="appendNumber(5)">5</a>
+                  <a class="key" onclick="clearDisplay()">C</a>
+                
+                  <a class="key" onclick="appendNumber(0)">0</a>
+                  <a class="key" onclick="appendNumber(1)">1</a>
+                  <a class="key" onclick="appendNumber(2)">2</a>
+                  <a class="key" onclick="appendDecimal()">.</a>
+
+                  <a class="key" id="key-delete" onclick="deleteNumber()">Delete</a>
+                </div>
+              </div>
+            </div>
+          </div>
+    </main>
+        <footer class=footer>
+        <div class="footer-container">
+            <div class="footer-section brand">
+                <h2>Greenify</h2>
+            </div>
+
+            <div class="footer-section contact">
+                <h3>Email</h3>
+                <p>wahidbercahaya@gmail.com</p><br>
+                <h3>Address</h3>
+                <p>Purwokerto <br>Jl. Panjaitan</p>
+            </div>
+
+            <div class="footer-section links">
+                <h3>Belajar</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Hitung Cepat</a></li>
+                    <li><a href="#">Pasar Digital</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section links">
+                <h3>About</h3>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">License</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="./assets/image/tiktok.png" alt="TikTok"></a>
+                    <a href="#"><img src="./assets/image/instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="./assets/image/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="./assets/image/twitter.png" alt="Twitter"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/calculator.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+</body>
+</html>

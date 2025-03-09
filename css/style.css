@@ -25,7 +25,7 @@ body {
   display: none;
 }
 
-.body-h::before {
+body::before {
   content: "";
   position: absolute;
   top: 0;
@@ -37,9 +37,10 @@ body {
     rgba(255, 255, 255, 0.1) 0%,
     rgba(27, 94, 32, 0) 80%
   );
+  z-index: -1;
 }
 
-.body-h::after {
+body::after {
   content: "";
   position: absolute;
   top: 0;
@@ -51,10 +52,7 @@ body {
     rgba(255, 255, 255, 0.1) 0%,
     rgba(27, 94, 32, 0) 60%
   );
-}
-.body-h::before,
-.body-h::after {
-  z-index: -1; 
+  z-index: -1;
 }
 
 .container {
@@ -72,8 +70,6 @@ a {
 
 .navbar {
   padding: 10px 20px;
-  position: relative;
-  z-index: 1000; 
 }
 
 .navbar-container {
@@ -102,14 +98,9 @@ a {
   text-decoration: none;
   margin: 10px 20px;
   padding-bottom: 5px;
-  transition: all;
-  transition-duration: 300ms;
-  border-bottom: 5px solid #4caf4f00;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.navbar a:hover {
-  border-bottom: 2px solid var(--color-primary);
-}
 .navbar a.active {
   border-bottom: 2px solid var(--color-primary);
   font-weight: 600;
@@ -145,17 +136,6 @@ a {
   margin-bottom: 30px;
   font-weight: 400;
 }
-.left-b h1 {
-  font-size: 5.5em;
-  width: 650px;
-  height: 400px;
-  margin-top: 0px;
-  margin-bottom: 30px;
-  font-weight: 400;
-  margin-left: 0px;
-margin-right: auto;
-}
-
 
 .left p {
   font-size: 1.2em;
@@ -188,7 +168,11 @@ margin-right: auto;
   left: -10px;
   width: 70px;
   height: 70px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
   border-radius: 50%;
 }
 
@@ -200,7 +184,11 @@ margin-right: auto;
   right: -20px;
   width: 100px;
   height: 100px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
   border-radius: 50%;
 }
 
@@ -231,18 +219,10 @@ margin-right: auto;
   z-index: 2; /* Memastikan gambar berada di atas shadow */
   bottom: 20px; /* Memindahkan gambar sedikit ke bawah */
 }
-.b-hero-image {
-  max-width: 550px;
-  height: auto;
-  border-radius: 10px;
-  position: relative; 
-  z-index: 2; 
-  bottom: 30px; 
-}
 
 .shadow {
   position: absolute;
-  bottom: -10px; /* Menempatkan shadow di bawah gambar */
+  bottom: -50px; /* Menempatkan shadow di bawah gambar */
   left: 50%;
   transform: translateX(-50%);
   width: 100%; /* Lebar shadow */
@@ -252,10 +232,10 @@ margin-right: auto;
       rgba(255, 255, 255, 0.5) 0%,
       rgba(255, 255, 255, 0) 100%
   );
-  opacity: 0.7;
+  opacity: 0.3;
   border-radius: 50%;
-  z-index: -1; 
-  filter: blur(10px); 
+  z-index: -1; /* Memastikan shadow berada di bawah gambar */
+  filter : blur(10px);
 }
 
 .btn-group {
@@ -312,7 +292,7 @@ margin-right: auto;
 .trash {
 
   border-radius: 50%;
-  /* top: ; */
+  top: ;
 }
 
 .leaf {
@@ -354,8 +334,6 @@ margin-right: auto;
   height: 180px;;
   margin-top: 20px;
 }
-/* Trash Care Section */
-
 
 /* Manage Trash Section */
 .manage-trash-section {
@@ -529,72 +507,6 @@ margin-right: auto;
 .card-button:hover {
   background-color: #4CAF50;
 }
-/* Belajar - Manage Trash Section */
-.trash-care-section {
-background-color: #204a22;
-  color: white;
-  padding: 100px 20px;
-  text-align: center;
-}
-
-.trash-care-section .section-subtitle {
-  width: 1100px;
-  font-size: 20px;
-  margin-top: 20px;
-  margin-bottom: 40px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.trash-care-section .section-title {
-  font-size: 3.5em;
-  width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.trash-care-section .card-container {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-}
-
-.trash-care-section .card {
-  display: flex;
-  flex-direction: row; 
-  align-items: center; 
-  padding: 20px;
-  border: 2px solid rgba(255, 255, 255, 0.23);
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 24px;
-  width: 100%;
-}
-
-
-.trash-care-section .card img {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px; /* Memberikan jarak antara gambar dan teks */
-}
-
-.trash-care-section .card h4 {
-  font-size: 20px;
-  font-weight: 500;
-  margin: 0; /* Menghilangkan margin default */
-  text-align: left; /* Menjaga teks di kiri */
-}
-
-.trash-care-section .card p {
-  font-size: 16px;
-  margin-top: 10px; 
-  text-align: left; 
-}
-
-
-
 
 /*  Green Store Section */
 .green-store-section {
@@ -736,10 +648,12 @@ background-color: #204a22;
   margin-top: 14px;
 }
 
+/* Testimoni Section */
+
 .testimoni-section {
   background-color: white;
   color: black;
-  padding: 100px 20px;
+  padding: 100px 0;
   text-align: center;
 }
 
@@ -791,16 +705,16 @@ background-color: #204a22;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   height: 100%; 
   width: 600px;
+  transition: 0.3s
 }
 
-.testimonial-green {
+.testimonial-card:hover {
   background-color: #2e7d32;
   color: white;
 }
 
 .profile {
   display: flex;
-  align-items: center;
   margin-bottom: 15px;
 }
 
@@ -819,6 +733,10 @@ background-color: #204a22;
   object-fit: cover;
 }
 
+.profile-info {
+  text-align: left;
+}
+
 .profile-info h3 {
   font-size: 16px;
   margin-bottom: 3px;
@@ -830,24 +748,16 @@ background-color: #204a22;
 }
 
 .testimonial-content {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.5;
   position: relative;
-}
-
-.testimonial-content::before {
-  content: '"';
-  font-size: 40px;
-  position: absolute;
-  left: -10px;
-  top: -15px;
-  opacity: 0.3;
+  text-align: left;
 }
 
 .carousel-buttons {
   display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  justify-content: space-between;;
+  margin: 10px 100px;
 }
 
 .carousel-button {
@@ -859,21 +769,28 @@ background-color: #204a22;
   display: flex;
   align-items: center;
   justify-content: center;
+  justify: content-between;
+  display: flex;
   cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid #757575;
   transition: all 0.3s ease;
   margin: 0 10px;
   z-index: 10;
 }
 
 .carousel-button:hover {
-  background-color: #f0f0f0;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-background);
 }
 
 .carousel-button svg {
   width: 24px;
   height: 24px;
-  fill: #333;
+  fill: #757575;
+}
+
+.carousel-button:hover svg {
+  fill: white;
 }
 
 .carousel-indicators {
@@ -896,8 +813,200 @@ background-color: #204a22;
   background-color: #2e7d32;
 }
 
+/* Action-cta-section */
+.action-cta-section {
+  background-color: #204a22;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.action-cta-section .section-subtitle {
+  width: 1000px;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.action-cta-section .section-title {
+  font-size: 3.5em;
+  font-weight: 500;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.action-cta-section button {
+  margin-top: 30px;
+}
+
+/* FOOTER */
+.footer {
+  background-color: var(--color-background);
+  color: white;
+  padding: 30px 50px;
+  position: relative;
+  z-index: -1;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 4%;
+  width: 92%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.5); /* Garis putih transparan */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1400px;
+  margin: auto auto auto auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+.footer-section.brand {
+  font-size: 24px;
+}
+.footer-section h2,
+.footer-section h3 {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.footer-section.links {
+  gap: 50px;
+}
+.footer-section.contact {
+  gap: 50px;
+  margin-right: 30px;
+}
+.footer-section p {
+  margin: 0 0 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons img {
+  width: 20px;
+  height: 20px;
+}
+
+
+
+@media (max-width: 1400px) {
+  /* Hero Section */
+  .left {
+    flex: 1;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .left h1 {
+    font-size: 5em;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    font-weight: 400;
+  }
+  
+  .left p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+
+  .hero-image {
+    max-width: 550px;
+    height: auto;
+    border-radius: 10px;
+    position: relative; /* Menambahkan posisi relatif untuk gambar */
+    z-index: 2; /* Memastikan gambar berada di atas shadow */
+    bottom: 20px; /* Memindahkan gambar sedikit ke bawah */
+  }
+
+  .circle-container {
+    display: flex;
+    width: 250px;
+    height: 250px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom , white, var(--color-background), var(--color-background), white);
+  }
+  
+  .circle {
+    width: 99.5%;
+    height: 99.5%;
+    padding: 0px 50px;
+    background-color: var(--color-background);
+    border-radius: inherit;
+  }
+  
+  .circle-image {
+    width: 120px;
+    height: 120px;;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  
+}
+
+
 @media (max-width: 768px) {
   .carousel-slide {
-      flex: 0 0 260px;
+    flex: 0 0 260px;
+  }
+  .footer-container {
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+  }
+
+  .footer-section {
+    width: 100%; 
+    max-width: 400px; 
+  }
+
+  .footer-section.links,
+  .footer-section.contact {
+    gap: 20px;
+    margin-right: 0; 
+  }
+
+  .social-icons {
+    flex-wrap: wrap; 
+    justify-content: center;
   }
 }

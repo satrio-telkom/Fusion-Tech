@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greenify</title>
     <link rel="stylesheet" href="./css/pd.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body class="body-h">
@@ -26,15 +27,15 @@
         <div class="pasar-digital-section">
             <div class="container">
                 <div class="filter-container">
-                    <h1 class="section-title">Pasar Digital</h1>
+                    <h1 class="section-title" data-aos="fade-right" data-aos-duration="1000">Pasar Digital</h1>
                     <div class="filter">
-                        <button class="pd-filter-btn active">Sehari-hari</button>
-                        <button class="pd-filter-btn">Perawatan</button>
-                        <button class="pd-filter-btn">Dekorasi</button>
-                        <button class="pd-filter-btn">Fashion</button>
+                        <button class="pd-filter-btn active" data-aos="fade-left" data-aos-duration="1000">Sehari-hari</button>
+                        <button class="pd-filter-btn" data-aos="fade-left" data-aos-duration="1200">Perawatan</button>
+                        <button class="pd-filter-btn" data-aos="fade-left" data-aos-duration="1400">Dekorasi</button>
+                        <button class="pd-filter-btn" data-aos="fade-left" data-aos-duration="1600">Fashion</button>
                     </div>
                 </div>
-                <div class="card-container"></div>
+                <div class="card-container" data-aos="fade-up" data-aos-duration="1000"></div>
                 <div id="popup-modal" class="popup-modal">
                     <div class="popup-content">
                         <div class="popup-image-container">
@@ -51,7 +52,7 @@
             </div>
         </div>
     </main>
-    <footer class="footer">
+    <footer class="footer" data-aos="fade-up" data-aos-duration="1000">
         <div class="footer-container">
             <div class="footer-section brand">
                 <h2>Greenify</h2>
@@ -97,6 +98,10 @@
     <script src="./js/script.js"></script>
     <script src="./js/effect.js"></script>
     <script src="./js/product.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 
 </body>
 
