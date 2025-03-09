@@ -214,7 +214,7 @@ body {
   
 
   /* FOOTER */
-.footer {
+  .footer {
     background-color: var(--color-background);
     color: white;
     margin-top: 70px;

@@ -133,7 +133,6 @@ a {
   font-weight: 400;
 }
 
-
 .glass-button {
   position: relative;
   display: inline-block;
@@ -257,7 +256,7 @@ a {
   align-items: center;
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(4px); /* Efek blur */
+  filter: blur(4px);
   border: none;
   border-radius: 100px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -392,7 +391,6 @@ a {
 .trash-care-section .card-content {
   display: flex;
   flex-direction: column;
-
 }
 
 .ddown {
@@ -413,10 +411,9 @@ a {
   padding-bottom: 10px;
 }
 
-
 .trash-care-section .accordion-title {
   margin-top: 10px;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 500;
   text-align: left;
 }
@@ -461,29 +458,32 @@ a {
   align-items: center;
   padding: 20px;
   border: 2px solid rgba(255, 255, 255, 0.23);
-  background: rgba(255, 255, 255, 0.05); /* Background normal */
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 24px;
   width: 100%;
   height: 400px;
-  transition: background 0.8s ease-in-out; /* Menambahkan transisi background dengan durasi lebih halus */
+  transition: background 0.4s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .trash-recycle-section .card:hover {
-  background: radial-gradient(circle at bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05)); /* Radial gradient pada hover */
+  background: radial-gradient(
+    circle at bottom,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.05)
+  ) !important;
+  transform: translateY(-10px) !important;
 }
-
-
 .trash-recycle-section .card img {
   width: 200px;
   height: 200px;
-  margin-right: 10px; /* Memberikan jarak antara gambar dan teks */
+  margin-right: 10px; 
 }
 
 .trash-recycle-section .card h4 {
   font-size: 32px;
   font-weight: 500;
   margin-top: 20px;
-  text-align: center; /* Menjaga teks di kiri */
+  text-align: center; 
 }
 
 .trash-recycle-section .card p {
@@ -583,36 +583,36 @@ a {
   color: white;
   padding: 30px 50px;
   position: relative;
+  z-index: -1;
 }
 
 .footer::before {
   content: "";
   position: absolute;
   top: 0px;
-  left: 10%;
-  width: 80%;
+  left: 4%;
+  width: 92%;
   height: 2px;
   background-color: rgba(255, 255, 255, 0.5); /* Garis putih transparan */
 }
-
 
 .footer-container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  max-width: 1200px;
-  margin: auto auto 50px auto;
+  max-width: 1400px;
+  margin: auto auto auto auto;
 }
 
 .footer-section {
   flex: 1;
   min-width: 200px;
 }
-.footer-section.brand{
+.footer-section.brand {
   font-size: 24px;
 }
-.footer-section h2, 
+.footer-section h2,
 .footer-section h3 {
   margin-bottom: 10px;
   font-weight: 500;
@@ -659,5 +659,26 @@ a {
 @media (max-width: 768px) {
   .carousel-slide {
     flex: 0 0 260px;
+  }
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .footer-section.links,
+  .footer-section.contact {
+    gap: 20px;
+    margin-right: 0;
+  }
+
+  .social-icons {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
