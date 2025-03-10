@@ -308,20 +308,22 @@ a {
 }
 
 .trash-care-section .section-subtitle {
-  width: 1100px;
+  width: 100%; 
   font-size: 20px;
   margin-top: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   margin-left: auto;
   margin-right: auto;
+  max-width: 1100px; 
 }
 
 .trash-care-section .section-title {
   font-size: 3.5em;
   font-weight: 500;
-  width: 800px;
+  width: 100%; 
   margin-left: auto;
   margin-right: auto;
+  max-width: 800px; 
 }
 
 .trash-care-section .card-container {
@@ -390,20 +392,22 @@ a {
 }
 
 .trash-recycle-section .section-subtitle {
-  width: 1100px;
+  width: 100%; 
   font-size: 20px;
   margin-top: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   margin-left: auto;
   margin-right: auto;
+  max-width: 1100px; 
 }
 
 .trash-recycle-section .section-title {
   font-size: 3.5em;
   font-weight: 500;
-  width: 800px;
+  width: 100%; 
   margin-left: auto;
   margin-right: auto;
+  max-width: 800px; 
 }
 
 .trash-recycle-section .card-container {
@@ -528,20 +532,22 @@ a {
 }
 
 .trash-agen-section .section-subtitle {
-  width: 1000px;
+  width: 100%; 
   font-size: 20px;
   margin-top: 20px;
   margin-bottom: 10px;
   margin-left: auto;
   margin-right: auto;
+  max-width: 1100px; 
 }
 
 .trash-agen-section .section-title {
   font-size: 3.5em;
   font-weight: 500;
-  width: 800px;
+  width: 100%; 
   margin-left: auto;
   margin-right: auto;
+  max-width: 800px; 
 }
 .trash-agen-section button {
   margin-top: 30px;
@@ -724,13 +730,13 @@ a {
   .trash-eco-section {
     padding: 50px 10px;
   }
-
-  .trash-eco-section .section-title {
+  .trash-recycle-section .section-title, .trash-eco-section .section-title, .trash-care-section .section-title, .trash-agen-section .section-title {
     font-size: 2em;
   }
 
-  .trash-eco-section .section-subtitle {
-    font-size: 16px;
+  .trash-agen-section .section-subtitle, .trash-care-section .section-subtitle, .trash-eco-section .section-subtitle, .trash-recycle-section .section-subtitle {
+    font-size: 13px;
+    margin-bottom: 30px;
   }
 
   .trash-eco-section .card {
@@ -750,15 +756,6 @@ a {
   .trash-recycle-section {
     padding: 50px 10px;
   }
-
-  .trash-recycle-section .section-title {
-    font-size: 2em;
-  }
-
-  .trash-recycle-section .section-subtitle {
-    font-size: 16px; 
-  }
-
   .trash-recycle-section .card {
     width: 100%; 
     height: auto; 
