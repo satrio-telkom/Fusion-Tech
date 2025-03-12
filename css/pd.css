@@ -40,7 +40,7 @@ a {
 .navbar {
   padding: 10px 20px;
   position: relative;
-  z-index: 1000;
+  z-index: 4;
 }
 
 .navbar-container {
@@ -228,62 +228,71 @@ a {
   margin: 0;
 }
 
+/* Modifikasi tampilan card container menggunakan grid dengan tinggi seragam */
 .pasar-digital-section .card-container {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
-  }
-  
-  .pasar-digital-section .card {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Mengubah align-items dari center ke flex-start */
-    padding: 15px;
-    border: 2px solid rgba(255, 255, 255, 0.23);
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 24px;
-    width: calc(20% - 15px);
-    height: 340px;
-    transition: background 0.4s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease;
-  }
-  
-  .pasar-digital-section .card:hover {
-    background: radial-gradient(
-      circle at bottom,
-      rgba(255, 255, 255, 0.2),
-      rgba(255, 255, 255, 0.05)
-    );
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .pasar-digital-section .card img {
-    width: 100%;
-    max-width: 240px;
-    height: auto;
-    object-fit: contain;
-    margin-bottom: 10px;
-    border-radius: 12px;
-  }
-  
-  .pasar-digital-section .card h4 {
-    font-size: 16px;
-    font-weight: 600;
-    margin: 10px 0 5px 0;
-    text-align: left;
-    color: #fff;
-    width: 100%; 
-  }
-  
-  .pasar-digital-section .card p {
-    font-size: 24px;
-    margin-top: 10px;
-    text-align: left;
-    color: rgba(255, 255, 255, 0.8);
-    width: 100%; 
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch; /* Meregangkan semua item ke tinggi maksimum di baris */
+}
+
+/* Modifikasi kartu untuk memastikan tinggi yang seragam */
+.pasar-digital-section .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Menggunakan tinggi 100% */
+  padding: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.23);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  transition: background 0.4s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.pasar-digital-section .card:hover {
+  background: radial-gradient(
+    circle at bottom,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.05)
+  );
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Memastikan gambar memiliki rasio aspek yang konsisten */
+.pasar-digital-section .card img {
+  width: 100%;
+  height: 200px; /* Menetapkan tinggi tetap untuk gambar */
+  object-fit: contain; /* Mempertahankan rasio aspek gambar */
+  margin-bottom: 10px;
+  border-radius: 12px;
+}
+
+/* Konten kartu mengambil ruang yang tersisa dengan flexbox */
+.pasar-digital-section .card .card-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Mengambil ruang yang tersisa di kartu */
+  justify-content: space-between; /* Mendorong harga ke bagian bawah */
+}
+
+.pasar-digital-section .card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 10px 0 5px 0;
+  text-align: left;
+  color: #fff;
+}
+
+.pasar-digital-section .card p {
+  font-size: 22px;
+  margin-top: auto; /* Mendorong harga ke bagian bawah */
+  text-align: left;
+  color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  padding-top: 10px;
+}
+
   
   .popup-modal {
     display: none;
@@ -295,7 +304,7 @@ a {
     background: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
-    z-index: 2;
+    z-index: 5;
 }
 
 .popup-content {
@@ -304,8 +313,10 @@ a {
     border-radius: 10px;
     text-align: left;
     width: 700px;
+    height: max-content;
     position: relative;
     color: black;
+    z-index: 5;
 }
 .popup-image-container {
     position: relative;
@@ -446,6 +457,10 @@ a {
       margin-top: 70px;
       padding: 30px 20px;
     }
+
+    .pasar-digital-section .card-container {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
   }
 
   @media (max-width: 1024px) {
@@ -545,6 +560,12 @@ a {
       }
 }
 
+@media (max-width: 768px) {
+  .pasar-digital-section .card-container {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
 /* New mobile styles for 576px and below with smooth animations */
 @media (max-width: 576px) {
   .navbar-container {
@@ -603,5 +624,25 @@ a {
     font-size: 1em;
     width: 100%;
     display: block;
+  }
+
+  .pasar-digital-section .card {
+    width: calc(100% - 15px);
+  }
+
+  .pasar-digital-section .card-container {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+  
+  .pasar-digital-section .card img {
+    height: 150px;
+  }
+  
+  .pasar-digital-section .card h4 {
+    font-size: 16px;
+  }
+  
+  .pasar-digital-section .card p {
+    font-size: 18px;
   }
 }
