@@ -161,7 +161,7 @@ function openPopup(card) {
 
   // Buat pesan WhatsApp
   const whatsappMessage = `Halo, saya ingin membeli ${productName} dengan harga ${productCurrency}${parseInt(productPrice).toLocaleString()}. Deskripsi: ${productDesc}`;
-  const whatsappLink = `https://wa.me/089509956233?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappLink = `https://wa.me/+6289509956233?text=${encodeURIComponent(whatsappMessage)}`;
 
   // Set tautan WhatsApp pada tombol Beli Sekarang
   const buyNowBtn = document.getElementById("buy-now-btn");
@@ -229,4 +229,33 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     });
   });
+  let lastTransformOrigin = 'center center'; // Variabel untuk menyimpan transform-origin terakhir
+
+document.querySelector('.popup-image-container').addEventListener('mousemove', function (e) {
+  const container = this;
+  const image = container.querySelector('.popup-image');
+
+  // Dapatkan posisi kursor relatif terhadap container
+  const rect = container.getBoundingClientRect();
+  const x = e.clientX - rect.left; // Posisi kursor horizontal
+  const y = e.clientY - rect.top; // Posisi kursor vertikal
+
+  // Hitung persentase posisi kursor relatif terhadap container
+  const originX = 100 - (x / container.offsetWidth) * 100;
+  const originY = 100 - (y / container.offsetHeight) * 100;
+
+  // Simpan transform-origin terakhir
+  lastTransformOrigin = `${originX}% ${originY}%`;
+
+  // Atur transform-origin berdasarkan posisi kursor
+  image.style.transformOrigin = lastTransformOrigin;
+  image.style.transform = 'scale(1.2)'; // Zoom gambar
+});
+
+// Kembalikan ke ukuran normal saat kursor meninggalkan container
+document.querySelector('.popup-image-container').addEventListener('mouseleave', function () {
+  const image = this.querySelector('.popup-image');
+  image.style.transform = 'scale(1)'; // Kembalikan ke ukuran normal
+  image.style.transformOrigin = lastTransformOrigin; // Gunakan transform-origin terakhir
+});
 });

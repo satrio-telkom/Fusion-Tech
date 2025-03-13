@@ -1,7 +1,7 @@
-/* FONT */
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* ROOT */
+
 :root {
   --color-primary: #4caf50;
   --color-secondary: #addaaf;
@@ -30,7 +30,7 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  left: 38%;
+  left: 41%;
   width: 55%;
   height: 50%;
   background: radial-gradient(
@@ -54,7 +54,7 @@ a {
   color: inherit;
 }
 
-/* NAVBAR */
+
 
 .navbar {
   padding: 10px 20px;
@@ -74,11 +74,10 @@ a {
   color: #fff;
   text-decoration: none;
   font-size: 2.5em;
-  transition: all 03s;
+  transition: all 03.s;
   width: 100px;
   margin: auto;
 }
-
 .navbar-menu {
   list-style: none;
   display: flex;
@@ -96,10 +95,11 @@ a {
   transition-duration: 300ms;
 }
 
-.navbar a:hover {
+.navbar-menu a:hover {
   border-bottom: 2px solid var(--color-primary);
 }
-.navbar a.active {
+
+.navbar-menu a.active {
   border-bottom: 2px solid var(--color-primary);
   font-weight: 600;
 }
@@ -118,7 +118,7 @@ a {
   height: 25px;
 }
 
-/* Hero Section */
+
 .hero-section {
   display: flex;
   justify-content: space-between;
@@ -126,14 +126,13 @@ a {
   padding: 70px 30px;
   max-width: 1400px;
   color: #fff;
-  align-items: flex-start;
 }
 
 .hero-section .container {
   display: flex;
 }
 
-/* Bagian Kiri */
+
 .left-b {
   flex: 1;
   padding: 0px 20px;
@@ -168,7 +167,7 @@ a {
   overflow: hidden;
 }
 
-/* Top left light gradient */
+
 .glass-button::before {
   content: "";
   position: absolute;
@@ -176,15 +175,13 @@ a {
   left: -10px;
   width: 70px;
   height: 70px;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.3) 0%,
-    rgba(255, 255, 255, 0) 70%
-  );
+  background: radial-gradient(circle,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0) 70%);
   border-radius: 50%;
 }
 
-/* Bottom right light gradient */
+
 .glass-button::after {
   content: "";
   position: absolute;
@@ -206,13 +203,13 @@ a {
   transform: translateY(-2px);
 }
 
-/* Content needs to stay above the gradients */
+
 .button-content {
   position: relative;
   z-index: 2;
 }
 
-/* Bagian Tengah */
+
 .center {
   flex: 1;
   text-align: center;
@@ -238,11 +235,11 @@ a {
 
 .shadow {
   position: absolute;
-  bottom: -10px; /* Menempatkan shadow di bawah gambar */
+  bottom: -10px; 
   left: 50%;
   transform: translateX(-50%);
-  width: 100%; /* Lebar shadow */
-  height: 156px; /* Tinggi shadow */
+  width: 100%; 
+  height: 156px; 
   background: radial-gradient(
     circle at center,
     rgba(255, 255, 255, 0.1) 0%,
@@ -258,11 +255,11 @@ a {
   position: absolute;
   height: 430px;
   justify-content: space-between;
-  top: 17%; /* Menempatkan tombol di tengah gambar */
+  top: 17%; 
   left: 20%;
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Jarak antar tombol */
+  gap: 10px; 
   z-index: 2;
 }
 
@@ -299,7 +296,7 @@ a {
   transform: translateY(-2px);
 }
 
-/* Belajar - Trash Care Section */
+
 .trash-care-section {
   background-color: #204a22;
   color: white;
@@ -308,22 +305,22 @@ a {
 }
 
 .trash-care-section .section-subtitle {
-  width: 100%; 
+  width: 100%;
   font-size: 20px;
   margin-top: 20px;
   margin-bottom: 10px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1100px; 
+  max-width: 1100px;
 }
 
 .trash-care-section .section-title {
   font-size: 3.5em;
   font-weight: 500;
-  width: 100%; 
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
-  max-width: 800px; 
+  max-width: 800px;
 }
 
 .trash-care-section .card-container {
@@ -383,7 +380,7 @@ a {
   text-align: left;
 }
 
-/* Belajar - trash recycle Section */
+
 .trash-recycle-section {
   background-color: #204a22;
   color: white;
@@ -392,28 +389,28 @@ a {
 }
 
 .trash-recycle-section .section-subtitle {
-  width: 100%; 
+  width: 100%;
   font-size: 20px;
   margin-top: 20px;
   margin-bottom: 10px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1100px; 
+  max-width: 1100px;
 }
 
 .trash-recycle-section .section-title {
   font-size: 3.5em;
   font-weight: 500;
-  width: 100%; 
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
-  max-width: 800px; 
+  max-width: 800px;
 }
 
 .trash-recycle-section .card-container {
   display: flex;
   gap: 20px;
-  /* flex-wrap: ; */
+  
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -458,7 +455,7 @@ a {
   margin-top: 10px;
   text-align: center;
 }
-/* Belajar - trash eco Section */
+
 .trash-eco-section {
   background-color: #204a22;
   color: white;
@@ -467,22 +464,22 @@ a {
 }
 
 .trash-eco-section .section-subtitle {
-  width: 100%; 
+  width: 100%;
   font-size: 20px;
   margin-top: 20px;
   margin-bottom: 10px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1100px; 
+  max-width: 1100px;
 }
 
 .trash-eco-section .section-title {
   font-size: 3.5em;
   font-weight: 500;
-  width: 100%; 
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
-  max-width: 800px; 
+  max-width: 800px;
 }
 
 .trash-eco-section .card-container {
@@ -498,7 +495,7 @@ a {
 .trash-eco-section .card {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; 
+  align-items: flex-start;
   padding: 20px;
   border: 2px solid rgba(255, 255, 255, 0.23);
   background: rgba(255, 255, 255, 0.08);
@@ -510,9 +507,9 @@ a {
 .trash-eco-section .card h4 {
   font-size: 24px;
   font-weight: 500;
-  margin: 0; 
+  margin: 0;
   text-align: left;
-  width: 100%; 
+  width: 100%;
 }
 
 .trash-eco-section .content .card {
@@ -523,7 +520,7 @@ a {
   width: 100%;
   max-width: 550px;
 }
-/* Belajar - trash agen Section */
+
 .trash-agen-section {
   background-color: #204a22;
   color: white;
@@ -532,28 +529,28 @@ a {
 }
 
 .trash-agen-section .section-subtitle {
-  width: 100%; 
+  width: 100%;
   font-size: 20px;
   margin-top: 20px;
   margin-bottom: 10px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1100px; 
+  max-width: 1100px;
 }
 
 .trash-agen-section .section-title {
   font-size: 3.5em;
   font-weight: 500;
-  width: 100%; 
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
-  max-width: 800px; 
+  max-width: 800px;
 }
 .trash-agen-section button {
   margin-top: 30px;
 }
 
-/* FOOTER */
+
 .footer {
   background-color: var(--color-background);
   color: white;
@@ -665,8 +662,41 @@ a {
     position: relative;
     z-index: 1000;
   }
-  .trash-eco-section .section-title {
-    font-size: 2.5em;
+  .body-h::before {
+    left: 41%;
+    width: 70%;
+    height: 30%;
+  }
+  .left-b {
+    width: 50%;
+  }
+  .left-b h1 {
+    font-size: 4em;
+    width: 400px;
+  }
+  .b-hero-image {
+    max-width: 100%; 
+    bottom: 0; 
+    position: static;
+  }
+
+  .shadow {
+    width: 100%; 
+    height: 40px; 
+    bottom: -5px; 
+    filter: blur(5px); 
+  }
+  .trash-recycle-section .section-title,
+  .trash-eco-section .section-title,
+  .trash-care-section .section-title,
+  .trash-agen-section .section-title {
+    font-size: 3em;
+  }
+  .trash-recycle-section .section-subtitle,
+  .trash-eco-section .section-subtitle,
+  .trash-care-section .section-subtitle,
+  .trash-agen-section .section-subtitle {
+    margin-bottom: 30px;
   }
 
   .trash-eco-section .card {
@@ -688,21 +718,71 @@ a {
   .footer-section p {
     font-size: 14px;
   }
+  .trash-care-section,
+  .trash-eco-section,
+  .trash-recycle-section {
+    padding: 30px 45px;
+  }
+  .trash-recycle-section .card {
+    width: 230px;
+    height: auto;
+  }
+  .trash-recycle-section .card img {
+    width: 120px;
+    height: auto;
+  }
+  .trash-recycle-section .card-content p {
+    font-size: 14px;
+  }
+  .trash-recycle-section .card-content h4 {
+    font-size: 24px;
+  }
+  .trash-eco-section .card {
+    width: 84%;
+    margin: 0px 10px 20px 10px;
+  }
+  .trash-eco-section .content {
+    width: 60%;
+    margin: auto;
+  }
+  .trash-eco-section .content .card h4 {
+    font-size: 18px;
+  }
+
+  .rec {
+    width: 40%;
+  }
+  .trash-eco-section .card-container {
+    gap: 0;
+    display: flex;
+    flex-direction: row;
+  }
+.trash-agen-section {
+  padding: 30px 45px 0px;
+}
 }
 
 @media (max-width: 835px) {
-  .navbar-logo {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5em;
+  
+  .navbar {
+    margin-left: 0;
   }
-
   .navbar-link {
     font-size: 0.75em;
   }
+  .body-h::before {
+    left: 2%;
+    top: 45%;
+    width: 100%;
+  }
+  .b-hero-image {
+    max-width: 100%; /* Gambar mengikuti lebar container */
+    bottom: 0; /* Menghapus posisi bottom */
+    position: static;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .carousel-slide {
     flex: 0 0 260px;
   }
@@ -727,14 +807,18 @@ a {
     flex-wrap: wrap;
     justify-content: center;
   }
-  .trash-eco-section {
-    padding: 50px 10px;
-  }
-  .trash-recycle-section .section-title, .trash-eco-section .section-title, .trash-care-section .section-title, .trash-agen-section .section-title {
+
+  .trash-recycle-section .section-title,
+  .trash-eco-section .section-title,
+  .trash-care-section .section-title,
+  .trash-agen-section .section-title {
     font-size: 2em;
   }
 
-  .trash-agen-section .section-subtitle, .trash-care-section .section-subtitle, .trash-eco-section .section-subtitle, .trash-recycle-section .section-subtitle {
+  .trash-agen-section .section-subtitle,
+  .trash-care-section .section-subtitle,
+  .trash-eco-section .section-subtitle,
+  .trash-recycle-section .section-subtitle {
     font-size: 13px;
     margin-bottom: 30px;
   }
@@ -753,30 +837,70 @@ a {
   .rec {
     width: 100%;
   }
-  .trash-recycle-section {
-    padding: 50px 10px;
+  .trash-recycle-section .card-container {
+    flex-direction: column;
   }
   .trash-recycle-section .card {
-    width: 100%; 
-    height: auto; 
-    padding: 15px; 
+    width: 100%;
+    height: auto;
+    padding: 15px;
   }
 
   .trash-recycle-section .card img {
-    width: 100px; 
+    width: 100px;
     height: 100px;
   }
 
   .trash-recycle-section .card h4 {
-    font-size: 20px; 
+    font-size: 20px;
   }
 
   .trash-recycle-section .card p {
-    font-size: 14px; 
+    font-size: 14px;
+  }
+  .trash-agen-section,
+  .trash-care-section,
+  .trash-eco-section,
+  .trash-recycle-section {
+    padding: 30px 25px;
+  }
+  .hero-section {
+    padding: 30px 10px;
+  }
+  .hero-section .container {
+    padding: 0px 10px; /* Mengurangi padding di mobile */
+    flex-direction: column;
+    align-items: start; /* Pusatkan konten di mobile */
+    text-align: center; /* Pusatkan teks */
+  }
+  .left-b h1 {
+    font-size: 2.5em; /* Mengurangi ukuran font untuk mobile */
+    margin-right: 0; /* Menghapus margin kanan */
+    margin-bottom: 20px; /* Mengurangi margin bawah */
+    width: 300px;
+  }
+  .trash-recycle-section .card:hover {
+    transform: none !important; /* Menghapus efek transform di mobile */
+  }
+
+  .b-hero-image {
+    max-width: 70%; /* Gambar mengikuti lebar container */
+    bottom: 0; /* Menghapus posisi bottom */
+    position: static;
+  }
+  .center {
+    margin: 0;
+  }
+
+  .shadow {
+    width: 100%; /* Mengurangi lebar shadow */
+    height: 40px; /* Mengurangi tinggi shadow */
+    bottom: -5px; /* Menyesuaikan posisi shadow */
+    filter: blur(5px); /* Mengurangi efek blur */
   }
 }
 
-/* New mobile styles for 576px and below with smooth animations */
+
 @media (max-width: 576px) {
   .navbar-container {
     flex-direction: column;

@@ -1,7 +1,7 @@
-/* FONT */
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* ROOT */
+
 :root {
   --color-primary: #4caf50;
   --color-secondary: #addaaf;
@@ -62,10 +62,11 @@ body {
   transition-duration: 300ms;
 }
 
-.navbar a:hover {
+.navbar-menu a:hover {
   border-bottom: 2px solid var(--color-primary);
 }
-.navbar a.active {
+
+.navbar-menu a.active {
   border-bottom: 2px solid var(--color-primary);
   font-weight: 600;
 }
@@ -84,7 +85,7 @@ body {
   height: 25px;
 }
 
-/* CALCULATOR */
+
 
 .container {
   display: flex;
@@ -129,7 +130,7 @@ body {
 
 .category {
   padding: 15px 20px;
-  /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
+  
   cursor: pointer;
   border-radius: 12px;
   transition: all 0.2s;
@@ -226,7 +227,7 @@ body {
   grid-column: span 4;
 }
 
-/* FOOTER */
+
 .footer {
   background-color: var(--color-background);
   color: white;
@@ -314,10 +315,6 @@ body {
 }
 
 @media (max-width: 1024px) {
-  .footer-section.brand {
-    font-size: 1.5em;
-    color: white;
-  }
 
   .footer-section h3 {
     font-size: 20px;
@@ -329,17 +326,14 @@ body {
 }
 
 @media (max-width: 835px) {
-  .navbar-logo {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5em;
+  .navbar {
+    margin-left: 0;
   }
-
   .navbar-link {
     font-size: 0.75em;
   }
 
-  /* CALCULATOR */
+  
   .container {
     display: flex;
     flex-direction: column-reverse;
@@ -363,7 +357,7 @@ body {
     margin: 0;
   }
 
-  /* FOOTER */
+  
   .footer-container {
     text-align: center;
     align-items: center;
@@ -376,7 +370,7 @@ body {
   }
 }
 
-/* New mobile styles for 576px and below with smooth animations */
+
 @media (max-width: 576px) {
   .navbar-container {
     flex-direction: column;
