@@ -95,10 +95,11 @@ a {
   transition-duration: 300ms;
 }
 
-.navbar a:hover {
+.navbar-menu a:hover {
   border-bottom: 2px solid var(--color-primary);
 }
-.navbar a.active {
+
+.navbar-menu a.active {
   border-bottom: 2px solid var(--color-primary);
   font-weight: 600;
 }

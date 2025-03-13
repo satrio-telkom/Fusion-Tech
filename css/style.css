@@ -130,11 +130,11 @@ a {
   transition-duration: 300ms;
 }
 
-.navbar a:hover {
+.navbar-menu a:hover {
   border-bottom: 2px solid var(--color-primary);
 }
 
-.navbar a.active {
+.navbar-menu a.active {
   border-bottom: 2px solid var(--color-primary);
   font-weight: 600;
 }
@@ -669,6 +669,7 @@ a {
 }
 
 
+/* Testimoni Section */
 
 .testimoni-section {
   background-color: white;
@@ -680,11 +681,10 @@ a {
 .testimoni-section .section-title {
   color: black;
   font-size: 3.5em;
-  font-weight: 500;
 }
 
 .testimoni-section .section-subtitle {
-  color: #757575;
+  color : #757575;
   font-size: 20px;
   margin-top: 20px;
   margin-bottom: 40px;
@@ -705,7 +705,6 @@ a {
 
 .carousel-track {
   display: flex;
-  justify-content: center;
   transition: transform 0.5s ease-in-out;
   gap: 20px;
 }
@@ -717,10 +716,7 @@ a {
 }
 
 .carousel-slide.active {
-  transform: scale(1.1);
-  
-  z-index: 10;
-  
+  opacity: 1;
 }
 
 .testimonial-card {
@@ -728,10 +724,9 @@ a {
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  height: 100%;
+  height: 100%; 
   width: 600px;
-  transition: 0.3s ease;
-  margin: auto;
+  transition: 0.3s
 }
 
 .testimonial-card:hover {
@@ -782,8 +777,7 @@ a {
 
 .carousel-buttons {
   display: flex;
-  justify-content: space-between;
-  ;
+  justify-content: space-between;;
   margin: 10px 100px;
 }
 
@@ -803,6 +797,17 @@ a {
   transition: all 0.3s ease;
   margin: 0 10px;
   z-index: 10;
+}
+
+
+.carousel-button img {
+  width: 24px;
+  height: 24px;
+  filter: invert(43%) sepia(0%) saturate(16%) hue-rotate(142deg) brightness(104%) contrast(84%);
+}
+
+.carousel-button:hover img {
+  filter: none;
 }
 
 .carousel-button:hover {
@@ -1217,12 +1222,12 @@ a {
   }
 
   .hero-images {
-    max-width: 380px;
+    max-width: 350px;
   }
 
   .btn-group {
     position: absolute;
-    height: 300px;
+    height: 240px;
     justify-content: space-between;
     top: 10%;
     left: 25%;
@@ -1233,13 +1238,17 @@ a {
   }
   
   .btn p {
-    font-size: 16px;
+    font-size: 14px;
     padding: 0 10px;
   }
   
+  .btn {
+    padding: 5px;
+  }
+
   .btn img {
-    width: 38px;
-    height: 38px;
+    width: 34px;
+    height: 34px;
     opacity: 1 !important;
   }
 
@@ -1262,6 +1271,10 @@ a {
   .green-store-section .card-container .card {
     width: 100%;
   }
+
+  .testimonial-card {
+    width: 350px;
+  }
 }
 
 @media (max-width: 390px) {
@@ -1269,5 +1282,44 @@ a {
     padding: 10px 10px;
     margin-left: 0;
     z-index: 1000;
+  }
+
+  .btn-group {
+    position: absolute;
+    height: 240px;
+    justify-content: space-between;
+    top: 10%;
+    left: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 2;
+  }
+  
+  .btn p {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+  
+  .btn {
+    padding: 5px;
+  }
+
+  .btn img {
+    width: 34px;
+    height: 34px;
+    opacity: 1 !important;
+  }
+
+  .recycle {
+    left: 140%;
+  }
+  
+  .trash {
+    border-radius: 50%;
+  }
+  
+  .leaf {
+    left: 140%;
   }
 }

@@ -7,22 +7,28 @@ document.addEventListener('DOMContentLoaded', function() {
     const carouselWrapper = document.querySelector('.carousel-wrapper');
     
     let currentIndex = 2; // Starting with the green card (middle slide)
-    const slideWidth = 600; // Width of each slide
+    let slideWidth = 600; // Default width of each slide
     const slideGap = 20; // Gap between slides
+
+    // Function to update slide width based on viewport size
+    function updateSlideWidth() {
+        if (window.innerWidth <= 576) {
+            slideWidth = 350; // Width of each slide for small screens
+        } else {
+            slideWidth = 600; // Default width for larger screens
+        }
+        calculateTrackWidth(); // Recalculate track width after updating slide width
+    }
     
     // Initialize the carousel
     function initializeCarousel() {
-        // Set up initial track width
-        calculateTrackWidth();
-        
-        // Center the current slide
+        updateSlideWidth(); // Set initial slide width
         centerActiveSlide(false);
-        
-        // Mark active slide
         updateActiveStates();
         
         // Handle window resize
         window.addEventListener('resize', () => {
+            updateSlideWidth();
             centerActiveSlide(false);
         });
     }
@@ -36,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Center the active slide
     function centerActiveSlide(animate = true) {
         const wrapperWidth = carouselWrapper.offsetWidth;
-        // Calculate the position to center the current slide
         const centerPosition = (wrapperWidth - slideWidth) / 2;
         const slidePosition = currentIndex * (slideWidth + slideGap);
         const translateX = centerPosition - slidePosition;
@@ -64,12 +69,11 @@ document.addEventListener('DOMContentLoaded', function() {
             indicator.classList.toggle('active', index === currentIndex);
         });
     
-        // Tambahkan kelas "active" ke card dalam slide yang aktif
+        // Add "active" class to the card in the active slide
         document.querySelectorAll('.testimonial-card').forEach((card, index) => {
             card.classList.toggle('active', index === currentIndex);
         });
     }
-    
     
     // Move to slide
     function moveToSlide(index) {
