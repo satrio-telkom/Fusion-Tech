@@ -357,6 +357,7 @@ a {
   border-radius: 50%;
   margin: auto;
   z-index: -2;
+  display: none;
 }
 
 /* Lingkaran */

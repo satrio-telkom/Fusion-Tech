@@ -74,11 +74,10 @@ a {
   color: #fff;
   text-decoration: none;
   font-size: 2.5em;
-  transition: all 03s;
+  transition: all 03.s;
   width: 100px;
   margin: auto;
 }
-
 .navbar-menu {
   list-style: none;
   display: flex;
@@ -175,11 +174,9 @@ a {
   left: -10px;
   width: 70px;
   height: 70px;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.3) 0%,
-    rgba(255, 255, 255, 0) 70%
-  );
+  background: radial-gradient(circle,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0) 70%);
   border-radius: 50%;
 }
 
@@ -217,7 +214,6 @@ a {
   text-align: center;
   position: relative;
 }
-
 
 .b-hero-image {
   max-width: 550px;
@@ -300,22 +296,22 @@ a {
 }
 
 .trash-care-section .section-subtitle {
-  width: 100%; 
+  width: 100%;
   font-size: 20px;
   margin-top: 20px;
   margin-bottom: 10px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1100px; 
+  max-width: 1100px;
 }
 
 .trash-care-section .section-title {
   font-size: 3.5em;
   font-weight: 500;
-  width: 100%; 
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
-  max-width: 800px; 
+  max-width: 800px;
 }
 
 .trash-care-section .card-container {
@@ -384,22 +380,22 @@ a {
 }
 
 .trash-recycle-section .section-subtitle {
-  width: 100%; 
+  width: 100%;
   font-size: 20px;
   margin-top: 20px;
   margin-bottom: 10px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1100px; 
+  max-width: 1100px;
 }
 
 .trash-recycle-section .section-title {
   font-size: 3.5em;
   font-weight: 500;
-  width: 100%; 
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
-  max-width: 800px; 
+  max-width: 800px;
 }
 
 .trash-recycle-section .card-container {
@@ -459,22 +455,22 @@ a {
 }
 
 .trash-eco-section .section-subtitle {
-  width: 100%; 
+  width: 100%;
   font-size: 20px;
   margin-top: 20px;
   margin-bottom: 10px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1100px; 
+  max-width: 1100px;
 }
 
 .trash-eco-section .section-title {
   font-size: 3.5em;
   font-weight: 500;
-  width: 100%; 
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
-  max-width: 800px; 
+  max-width: 800px;
 }
 
 .trash-eco-section .card-container {
@@ -490,7 +486,7 @@ a {
 .trash-eco-section .card {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; 
+  align-items: flex-start;
   padding: 20px;
   border: 2px solid rgba(255, 255, 255, 0.23);
   background: rgba(255, 255, 255, 0.08);
@@ -502,9 +498,9 @@ a {
 .trash-eco-section .card h4 {
   font-size: 24px;
   font-weight: 500;
-  margin: 0; 
+  margin: 0;
   text-align: left;
-  width: 100%; 
+  width: 100%;
 }
 
 .trash-eco-section .content .card {
@@ -524,22 +520,22 @@ a {
 }
 
 .trash-agen-section .section-subtitle {
-  width: 100%; 
+  width: 100%;
   font-size: 20px;
   margin-top: 20px;
   margin-bottom: 10px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1100px; 
+  max-width: 1100px;
 }
 
 .trash-agen-section .section-title {
   font-size: 3.5em;
   font-weight: 500;
-  width: 100%; 
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
-  max-width: 800px; 
+  max-width: 800px;
 }
 .trash-agen-section button {
   margin-top: 30px;
@@ -657,8 +653,41 @@ a {
     position: relative;
     z-index: 1000;
   }
-  .trash-eco-section .section-title {
-    font-size: 2.5em;
+  .body-h::before {
+    left: 41%;
+    width: 70%;
+    height: 30%;
+  }
+  .left-b {
+    width: 50%;
+  }
+  .left-b h1 {
+    font-size: 4em;
+    width: 400px;
+  }
+  .b-hero-image {
+    max-width: 100%; 
+    bottom: 0; 
+    position: static;
+  }
+
+  .shadow {
+    width: 100%; 
+    height: 40px; 
+    bottom: -5px; 
+    filter: blur(5px); 
+  }
+  .trash-recycle-section .section-title,
+  .trash-eco-section .section-title,
+  .trash-care-section .section-title,
+  .trash-agen-section .section-title {
+    font-size: 3em;
+  }
+  .trash-recycle-section .section-subtitle,
+  .trash-eco-section .section-subtitle,
+  .trash-care-section .section-subtitle,
+  .trash-agen-section .section-subtitle {
+    margin-bottom: 30px;
   }
 
   .trash-eco-section .card {
@@ -680,77 +709,66 @@ a {
   .footer-section p {
     font-size: 14px;
   }
+  .trash-care-section,
+  .trash-eco-section,
+  .trash-recycle-section {
+    padding: 30px 45px;
+  }
+  .trash-recycle-section .card {
+    width: 230px;
+    height: auto;
+  }
+  .trash-recycle-section .card img {
+    width: 120px;
+    height: auto;
+  }
+  .trash-recycle-section .card-content p {
+    font-size: 14px;
+  }
+  .trash-recycle-section .card-content h4 {
+    font-size: 24px;
+  }
+  .trash-eco-section .card {
+    width: 84%;
+    margin: 0px 10px 20px 10px;
+  }
+  .trash-eco-section .content {
+    width: 60%;
+    margin: auto;
+  }
+  .trash-eco-section .content .card h4 {
+    font-size: 18px;
+  }
+
+  .rec {
+    width: 40%;
+  }
+  .trash-eco-section .card-container {
+    gap: 0;
+    display: flex;
+    flex-direction: row;
+  }
+.trash-agen-section {
+  padding: 30px 45px 0px;
+}
 }
 
 @media (max-width: 835px) {
+  
   .navbar {
     margin-left: 0;
   }
-  .navbar-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .navbar-mobile-toggle {
-    display: block;
-    position: absolute;
-    top: 26px;
-    right: 20px;
-    transition: transform 0.3s ease;
-  }
-
-  .navbar-mobile-toggle.active {
-    transform: rotate(90deg);
-  }
-
-  .navbar-menu {
-    display: block;
-    flex-direction: column;
-
-    margin-top: 15px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease;
-    opacity: 0;
-  }
-
-  .navbar-menu.active {
-    max-height: 300px;
-    opacity: 1;
-  }
-
-  .navbar-menu li {
-    transform: translateY(-20px);
-    opacity: 0;
-    transition: transform 0.4s ease, opacity 0.4s ease;
-    transition-delay: 0.05s;
-  }
-
-  .navbar-menu.active li {
-    transform: translateY(0);
-    opacity: 1;
-  }
-
-  .navbar-menu.active li:nth-child(1) {
-    transition-delay: 0.1s;
-  }
-  .navbar-menu.active li:nth-child(2) {
-    transition-delay: 0.2s;
-  }
-  .navbar-menu.active li:nth-child(3) {
-    transition-delay: 0.3s;
-  }
-  .navbar-menu.active li:nth-child(4) {
-    transition-delay: 0.4s;
+  .navbar-link {
+    font-size: 0.75em;
   }
   .body-h::before {
     left: 2%;
     top: 45%;
     width: 100%;
   }
- .hero-section{
-  padding: 30px 20px;
- }
+  .hero-section {
+    padding: 30px 20px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -779,11 +797,17 @@ a {
     justify-content: center;
   }
 
-  .trash-recycle-section .section-title, .trash-eco-section .section-title, .trash-care-section .section-title, .trash-agen-section .section-title {
+  .trash-recycle-section .section-title,
+  .trash-eco-section .section-title,
+  .trash-care-section .section-title,
+  .trash-agen-section .section-title {
     font-size: 2em;
   }
 
-  .trash-agen-section .section-subtitle, .trash-care-section .section-subtitle, .trash-eco-section .section-subtitle, .trash-recycle-section .section-subtitle {
+  .trash-agen-section .section-subtitle,
+  .trash-care-section .section-subtitle,
+  .trash-eco-section .section-subtitle,
+  .trash-recycle-section .section-subtitle {
     font-size: 13px;
     margin-bottom: 30px;
   }
@@ -806,25 +830,28 @@ a {
     flex-direction: column;
   }
   .trash-recycle-section .card {
-    width: 100%; 
-    height: auto; 
-    padding: 15px; 
+    width: 100%;
+    height: auto;
+    padding: 15px;
   }
 
   .trash-recycle-section .card img {
-    width: 100px; 
+    width: 100px;
     height: 100px;
   }
 
   .trash-recycle-section .card h4 {
-    font-size: 20px; 
+    font-size: 20px;
   }
 
   .trash-recycle-section .card p {
-    font-size: 14px; 
+    font-size: 14px;
   }
-  .trash-agen-section, .trash-care-section, .trash-eco-section, .trash-recycle-section {
-padding: 30px 25px;
+  .trash-agen-section,
+  .trash-care-section,
+  .trash-eco-section,
+  .trash-recycle-section {
+    padding: 30px 25px;
   }
   .hero-section .container {
     padding: 0px 10px; /* Mengurangi padding di mobile */
