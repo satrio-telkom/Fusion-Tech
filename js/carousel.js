@@ -59,11 +59,17 @@ document.addEventListener('DOMContentLoaded', function() {
         slides.forEach((slide, index) => {
             slide.classList.toggle('active', index === currentIndex);
         });
-        
+    
         indicators.forEach((indicator, index) => {
             indicator.classList.toggle('active', index === currentIndex);
         });
+    
+        // Tambahkan kelas "active" ke card dalam slide yang aktif
+        document.querySelectorAll('.testimonial-card').forEach((card, index) => {
+            card.classList.toggle('active', index === currentIndex);
+        });
     }
+    
     
     // Move to slide
     function moveToSlide(index) {
