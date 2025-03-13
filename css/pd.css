@@ -1,7 +1,7 @@
-/* FONT */
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* ROOT */
+
 :root {
   --color-primary: #4caf50;
   --color-secondary: #addaaf;
@@ -36,7 +36,7 @@ a {
   color: inherit;
 }
 
-/* NAVBAR */
+
 .navbar {
   padding: 10px 20px;
   position: relative;
@@ -100,7 +100,7 @@ a {
 }
 
 
-/* Hero Section */
+
 .hero-section {
   display: flex;
   justify-content: space-between;
@@ -133,7 +133,7 @@ a {
   overflow: hidden;
 }
 
-/* Top left light gradient */
+
 .glass-button::before {
   content: "";
   position: absolute;
@@ -149,7 +149,7 @@ a {
   border-radius: 50%;
 }
 
-/* Bottom right light gradient */
+
 .glass-button::after {
   content: "";
   position: absolute;
@@ -228,20 +228,20 @@ a {
   margin: 0;
 }
 
-/* Modifikasi tampilan card container menggunakan grid dengan tinggi seragam */
+
 .pasar-digital-section .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 20px;
   justify-content: center;
-  align-items: stretch; /* Meregangkan semua item ke tinggi maksimum di baris */
+  align-items: stretch; 
 }
 
-/* Modifikasi kartu untuk memastikan tinggi yang seragam */
+
 .pasar-digital-section .card {
   display: flex;
   flex-direction: column;
-  height: 100%; /* Menggunakan tinggi 100% */
+  height: 100%; 
   padding: 15px;
   border: 2px solid rgba(255, 255, 255, 0.23);
   background: rgba(255, 255, 255, 0.05);
@@ -259,21 +259,21 @@ a {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Memastikan gambar memiliki rasio aspek yang konsisten */
+
 .pasar-digital-section .card img {
   width: 100%;
-  height: 200px; /* Menetapkan tinggi tetap untuk gambar */
-  object-fit: contain; /* Mempertahankan rasio aspek gambar */
+  height: 200px; 
+  object-fit: contain; 
   margin-bottom: 10px;
   border-radius: 12px;
 }
 
-/* Konten kartu mengambil ruang yang tersisa dengan flexbox */
+
 .pasar-digital-section .card .card-content {
   display: flex;
   flex-direction: column;
-  flex-grow: 1; /* Mengambil ruang yang tersisa di kartu */
-  justify-content: space-between; /* Mendorong harga ke bagian bawah */
+  flex-grow: 1; 
+  justify-content: space-between; 
 }
 
 .pasar-digital-section .card h4 {
@@ -286,7 +286,7 @@ a {
 
 .pasar-digital-section .card p {
   font-size: 22px;
-  margin-top: auto; /* Mendorong harga ke bagian bawah */
+  margin-top: auto; 
   text-align: left;
   color: rgba(255, 255, 255, 0.8);
   width: 100%;
@@ -370,7 +370,7 @@ a {
     color:#204a22;
 }
 
-  /* FOOTER */
+  
   .footer {
     background-color: var(--color-background);
     color: white;
@@ -490,7 +490,7 @@ a {
     font-size: 0.75em;
   }
 
-      /* FOOTER */
+      
       .footer-container {
         text-align: center;
         align-items: center;
@@ -566,7 +566,7 @@ a {
   }
 }
 
-/* New mobile styles for 576px and below with smooth animations */
+
 @media (max-width: 576px) {
   .navbar-container {
     flex-direction: column;

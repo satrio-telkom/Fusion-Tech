@@ -1,7 +1,7 @@
-/* FONT */
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* ROOT */
+
 :root {
   --color-primary: #4caf50;
   --color-secondary: #addaaf;
@@ -54,7 +54,7 @@ a {
   color: inherit;
 }
 
-/* NAVBAR */
+
 
 .navbar {
   padding: 10px 20px;
@@ -118,7 +118,7 @@ a {
   height: 25px;
 }
 
-/* Hero Section */
+
 .hero-section {
   display: flex;
   justify-content: space-between;
@@ -133,7 +133,7 @@ a {
   display: flex;
 }
 
-/* Bagian Kiri */
+
 .left-b {
   flex: 1;
   padding: 0px 20px;
@@ -168,7 +168,7 @@ a {
   overflow: hidden;
 }
 
-/* Top left light gradient */
+
 .glass-button::before {
   content: "";
   position: absolute;
@@ -184,7 +184,7 @@ a {
   border-radius: 50%;
 }
 
-/* Bottom right light gradient */
+
 .glass-button::after {
   content: "";
   position: absolute;
@@ -206,13 +206,13 @@ a {
   transform: translateY(-2px);
 }
 
-/* Content needs to stay above the gradients */
+
 .button-content {
   position: relative;
   z-index: 2;
 }
 
-/* Bagian Tengah */
+
 .center {
   flex: 1;
   text-align: center;
@@ -223,9 +223,9 @@ a {
   max-width: 650px;
   height: auto;
   border-radius: 10px;
-  position: relative; /* Menambahkan posisi relatif untuk gambar */
-  z-index: 2; /* Memastikan gambar berada di atas shadow */
-  bottom: 20px; /* Memindahkan gambar sedikit ke bawah */
+  position: relative; 
+  z-index: 2; 
+  bottom: 20px; 
 }
 .b-hero-image {
   max-width: 550px;
@@ -238,11 +238,11 @@ a {
 
 .shadow {
   position: absolute;
-  bottom: -10px; /* Menempatkan shadow di bawah gambar */
+  bottom: -10px; 
   left: 50%;
   transform: translateX(-50%);
-  width: 100%; /* Lebar shadow */
-  height: 156px; /* Tinggi shadow */
+  width: 100%; 
+  height: 156px; 
   background: radial-gradient(
     circle at center,
     rgba(255, 255, 255, 0.1) 0%,
@@ -258,11 +258,11 @@ a {
   position: absolute;
   height: 430px;
   justify-content: space-between;
-  top: 17%; /* Menempatkan tombol di tengah gambar */
+  top: 17%; 
   left: 20%;
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Jarak antar tombol */
+  gap: 10px; 
   z-index: 2;
 }
 
@@ -299,7 +299,7 @@ a {
   transform: translateY(-2px);
 }
 
-/* Belajar - Trash Care Section */
+
 .trash-care-section {
   background-color: #204a22;
   color: white;
@@ -383,7 +383,7 @@ a {
   text-align: left;
 }
 
-/* Belajar - trash recycle Section */
+
 .trash-recycle-section {
   background-color: #204a22;
   color: white;
@@ -413,7 +413,7 @@ a {
 .trash-recycle-section .card-container {
   display: flex;
   gap: 20px;
-  /* flex-wrap: ; */
+  
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -458,7 +458,7 @@ a {
   margin-top: 10px;
   text-align: center;
 }
-/* Belajar - trash eco Section */
+
 .trash-eco-section {
   background-color: #204a22;
   color: white;
@@ -523,7 +523,7 @@ a {
   width: 100%;
   max-width: 550px;
 }
-/* Belajar - trash agen Section */
+
 .trash-agen-section {
   background-color: #204a22;
   color: white;
@@ -553,7 +553,7 @@ a {
   margin-top: 30px;
 }
 
-/* FOOTER */
+
 .footer {
   background-color: var(--color-background);
   color: white;
@@ -776,7 +776,7 @@ a {
   }
 }
 
-/* New mobile styles for 576px and below with smooth animations */
+
 @media (max-width: 576px) {
   .navbar-container {
     flex-direction: column;

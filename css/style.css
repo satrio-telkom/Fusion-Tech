@@ -1,7 +1,7 @@
-/* FONT */
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* ROOT */
+
 :root {
   --color-primary: #4caf50;
   --color-secondary: #addaaf;
@@ -52,31 +52,31 @@ body::after {
 }
 
 .container {
-  max-width: 1400px; /* Batas maksimum lebar container */
-  margin: 0 auto; /* Pusatkan container */
-  padding: 0 20px; /* Padding untuk menghindari elemen menempel di tepi */
+  max-width: 1400px; 
+  margin: 0 auto; 
+  padding: 0 20px; 
 }
 
 button,
 .glass-button,
 .read-article-button {
-  width: auto; /* Lebar tombol menyesuaikan konten */
-  padding: 10px 20px; /* Padding yang cukup untuk tombol */
-  font-size: 1em; /* Ukuran font yang sesuai */
+  width: auto; 
+  padding: 10px 20px; 
+  font-size: 1em; 
 }
 
-/* Flexbox dan Grid Layout */
+
 .flex-container,
 .grid-container {
   display: flex;
-  flex-wrap: wrap; /* Pastikan elemen tidak keluar dari container */
-  gap: 20px; /* Jarak antar elemen */
+  flex-wrap: wrap; 
+  gap: 20px; 
 }
 
-/* Overflow Handling */
+
 .carousel-container,
 .carousel-track {
-  overflow: hidden; /* Sembunyikan overflow pada carousel */
+  overflow: hidden; 
 }
 
 
@@ -85,7 +85,7 @@ a {
   color: inherit;
 }
 
-/* NAVBAR */
+
 
 .navbar {
   padding: 10px 20px;
@@ -154,8 +154,9 @@ a {
   height: 25px;
 }
 
-/* Hero Section */
+
 .hero-section {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -169,7 +170,7 @@ a {
   display: flex;
 }
 
-/* Bagian Kiri */
+
 .left {
   flex: 1;
   padding: 0px 20px;
@@ -208,7 +209,7 @@ a {
   overflow: hidden;
 }
 
-/* Top left light gradient */
+
 .glass-button::before {
   content: "";
   position: absolute;
@@ -222,7 +223,7 @@ a {
   border-radius: 50%;
 }
 
-/* Bottom right light gradient */
+
 .glass-button::after {
   content: "";
   position: absolute;
@@ -242,13 +243,13 @@ a {
   transform: translateY(-2px);
 }
 
-/* Content needs to stay above the gradients */
+
 .button-content {
   position: relative;
   z-index: 2;
 }
 
-/* Bagian Tengah */
+
 .center {
   flex: 1;
   text-align: center;
@@ -260,30 +261,30 @@ a {
   height: auto;
   border-radius: 10px;
   position: relative;
-  /* Menambahkan posisi relatif untuk gambar */
+  
   z-index: 2;
-  /* Memastikan gambar berada di atas shadow */
+  
   bottom: 20px;
-  /* Memindahkan gambar sedikit ke bawah */
+  
 }
 
 .shadow {
   position: absolute;
   bottom: -50px;
-  /* Menempatkan shadow di bawah gambar */
+  
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  /* Lebar shadow */
+  
   height: 156px;
-  /* Tinggi shadow */
+  
   background: radial-gradient(circle at center,
       rgba(255, 255, 255, 0.5) 0%,
       rgba(255, 255, 255, 0) 100%);
   opacity: 0.3;
   border-radius: 50%;
   z-index: -1;
-  /* Memastikan shadow berada di bawah gambar */
+  
   filter: blur(10px);
 }
 
@@ -292,12 +293,12 @@ a {
   height: 430px;
   justify-content: space-between;
   top: 17%;
-  /* Menempatkan tombol di tengah gambar */
+  
   left: 20%;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  /* Jarak antar tombol */
+  
   z-index: 2;
 }
 
@@ -310,7 +311,7 @@ a {
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(4px);
-  /* Efek blur */
+  
   border: none;
   border-radius: 100px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -349,7 +350,7 @@ a {
   left: 180%;
 }
 
-/* Bagian Kanan */
+
 .right {
   flex: 1;
   text-align: center;
@@ -359,7 +360,7 @@ a {
   z-index: -2;
 }
 
-/* Lingkaran */
+
 .circle-container {
   display: flex;
   width: 300px;
@@ -386,7 +387,7 @@ a {
   margin-top: 20px;
 }
 
-/* Manage Trash Section */
+
 .manage-trash-section {
   background-color: white;
   padding: 50px 30px;
@@ -413,9 +414,9 @@ a {
 }
 
 .content-container .right-manage {
-/* Batasi lebar agar tidak terlalu melebar */
+
   text-align: left;
-  margin: 0 auto; /* Pusatkan saat layar kecil */
+  margin: 0 auto; 
 }
 
 .manage-trash-image {
@@ -450,7 +451,7 @@ a {
   background-color: #4CAF50;
 }
 
-/* Trash Value Section */
+
 .trash-value-section {
   background-color: #204a22;
   color: white;
@@ -492,7 +493,7 @@ a {
   inset: 0;
   border-radius: 24px;
   padding: 2px;
-  /* control the border thickness */
+  
   background: linear-gradient(45deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
@@ -561,7 +562,7 @@ a {
   background-color: #4CAF50;
 }
 
-/*  Green Store Section */
+
 .green-store-section {
   background-color: #204a22;
   color: white;
@@ -613,18 +614,18 @@ a {
   margin-top: 30px;
 }
 
-/* Change-trash-section */
+
 .change-trash-section {
   background-color: white;
   color: black;
-  width: 100vw; /* Lebar penuh */
-  min-height: 100vh; /* Tinggi minimal 1 layar penuh */
+  width: 100vw; 
+  min-height: 100vh; 
   display: flex;
-  justify-content: center; /* Pusatkan konten secara horizontal */
-  align-items: center; /* Pusatkan konten secara vertikal */
+  justify-content: center; 
+  align-items: center; 
   text-align: center;
-  padding: 50px 20px; /* Sesuaikan padding agar tidak terlalu besar */
-  box-sizing: border-box; /* Pastikan padding tidak merusak layout */
+  padding: 50px 20px; 
+  box-sizing: border-box; 
 }
 
 .change-trash-section .section-title {
@@ -697,7 +698,7 @@ a {
   margin-top: 14px;
 }
 
-/* Testimoni Section */
+
 
 .testimoni-section {
   background-color: white;
@@ -746,9 +747,9 @@ a {
 
 .carousel-slide.active {
   transform: scale(1.1);
-  /* Memberi efek sedikit lebih besar pada kartu aktif */
+  
   z-index: 10;
-  /* Menaikkan kartu aktif ke atas */
+  
 }
 
 .testimonial-card {
@@ -868,7 +869,7 @@ a {
   background-color: #2e7d32;
 }
 
-/* Action-cta-section */
+
 .action-cta-section {
   background-color: #204a22;
   color: white;
@@ -897,7 +898,7 @@ a {
   margin-top: 30px;
 }
 
-/* FOOTER */
+
 .footer {
   background-color: var(--color-background);
   color: white;
@@ -977,7 +978,7 @@ a {
   height: 22px;
 }
 
-/* New mobile styles for 576px and below with smooth animations */
+
 @media (max-width: 576px) {
   .navbar-container {
     flex-direction: column;
@@ -1072,7 +1073,7 @@ a {
 
 @media (max-width: 1024px) {
 
-  /* Hero Section */
+  
   .hero-section {
     padding: 50px 20px;
   }
@@ -1093,20 +1094,20 @@ a {
   .shadow {
     position: absolute;
     bottom: -50px;
-    /* Menempatkan shadow di bawah gambar */
+    
     left: 60%;
     transform: translateX(-50%);
     width: 100%;
-    /* Lebar shadow */
+    
     height: 156px;
-    /* Tinggi shadow */
+    
     background: radial-gradient(circle at center,
         rgba(255, 255, 255, 0.5) 0%,
         rgba(255, 255, 255, 0) 100%);
     opacity: 0.3;
     border-radius: 50%;
     z-index: -1;
-    /* Memastikan shadow berada di bawah gambar */
+    
     filter: blur(10px);
   }
 
@@ -1120,7 +1121,7 @@ a {
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(4px);
-    /* Efek blur */
+    
     border: none;
     border-radius: 100px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -1146,15 +1147,15 @@ a {
     text-decoration: none;
     text-align: center;
     background: linear-gradient(to right,
-        /* Arah gradient (dari kiri ke kanan) */
+        
         rgba(173, 218, 175, 0.8) 0%,
-        /* #ADDAAF dengan opacity 80% di 0% */
+        
         rgba(42, 96, 44, 1) 20%,
-        /* #2A602C dengan opacity 100% di 20% */
+        
         rgba(42, 96, 44, 1) 80%,
-        /* #2A602C dengan opacity 100% di 80% */
+        
         rgba(173, 218, 175, 0.8) 100%
-        /* #ADDAAF dengan opacity 80% di 100% */
+        
       );
     border-radius: 50px;
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -1166,7 +1167,7 @@ a {
 
   .green-store-section .section-title {
     font-size: 48px;
-    /* Ukuran font judul diperkecil */
+    
     font-weight: 400;
     max-width: 500px;
     margin: 0 auto 20px;
@@ -1174,9 +1175,9 @@ a {
 
   .green-store-section .section-subtitle {
     font-size: 12px;
-    /* Ukuran font subjudul diperkecil */
+    
     margin-bottom: 30px;
-    /* Margin bawah disesuaikan */
+    
   }
 
   .leaf {
@@ -1221,7 +1222,7 @@ a {
     top: -7%;
   }
 
-  /* Manage Trash Section */
+  
   .manage-trash-section .section-title {
     font-size: 2.5em;
   }
@@ -1236,74 +1237,74 @@ a {
     max-width: 350px;
   }
 
-  /* Trash Value Section - iPad Responsive */
+  
   .trash-value-section {
     padding: 80px 20px;
-    /* Mengurangi padding untuk menghemat ruang */
+    
   }
 
   .trash-value-section .section-title {
     font-size: 48px;
-    /* Ukuran font sedikit diperkecil */
+    
     max-width: 400px;
     font-weight: 400;
-    /* Membatasi lebar judul */
+    
     margin: 0 auto 20px;
-    /* Pusatkan judul dan beri margin bawah */
+    
     white-space: normal;
-    /* Memungkinkan teks untuk wrap ke baris berikutnya */
+    
     line-height: 1.2;
-    /* Tinggi baris disesuaikan */
+    
   }
 
   .trash-value-section .section-subtitle {
     font-size: 12px;
-    /* Ukuran font diperkecil */
+    
     margin-bottom: 30px;
-    /* Margin bawah disesuaikan */
+    
   }
 
   .trash-value-section .card-container {
     gap: 15px;
-    /* Jarak antar card dikurangi */
+    
     padding: 0 20px;
-    /* Padding horizontal untuk card container */
+    
   }
 
   .trash-value-section .card {
     padding: 20px;
-    /* Padding card dikurangi */
+    
   }
 
   .card-title {
     font-size: 28px;
-    /* Ukuran font judul card diperkecil */
+    
     margin-bottom: 15px;
-    /* Margin bawah disesuaikan */
+    
   }
 
   .step-list li {
     padding: 8px 15px;
-    /* Padding list item dikurangi */
+    
     font-size: 16px;
-    /* Ukuran font list item diperkecil */
+    
   }
 
   .card-text {
     font-size: 16px;
-    /* Ukuran font teks card diperkecil */
+    
     margin-bottom: 15px;
-    /* Margin bawah disesuaikan */
+    
   }
 
   .glass-button {
     padding: 12px 30px;
-    /* Padding tombol dikurangi */
+    
     font-size: 14px;
-    /* Ukuran font tombol diperkecil */
+    
   }
 
-  /* Green Store Section */
+  
   .green-store-section .section-title {
     font-size: 2.5em;
   }
@@ -1312,7 +1313,7 @@ a {
     width: 45%;
   }
 
-  /* Change Trash Section */
+  
   .change-trash-section .section-title {
     font-size: 2.5em;
     font-weight: 450;
@@ -1356,56 +1357,56 @@ a {
 
   .testimoni-section {
     padding: 80px 0;
-    /* Padding section dikurangi */
+    
   }
 
   .testimoni-section .section-title {
     font-size: 2.8em;
-    /* Ukuran font judul diperkecil */
+    
   }
 
   .testimoni-section .section-subtitle {
     font-size: 18px;
-    /* Ukuran font subjudul diperkecil */
+    
     margin-bottom: 30px;
-    /* Margin bawah disesuaikan */
+    
   }
 
   .carousel-container {
     max-width: 800px;
-    /* Lebar container dibatasi */
+    
   }
 
   .carousel-slide {
     flex: 0 0 453px;
-    /* Lebar card testimoni diatur 453px */
+    
     opacity: 0.5;
-    /* Opacity untuk card tidak aktif */
+    
     margin: 0 10px;
   }
 
   .carousel-track {
     display: flex;
     justify-content: center;
-    /* Memastikan slide aktif selalu di tengah */
+    
     transition: transform 0.5s ease-in-out;
   }
 
   .carousel-slide.active {
     transform: scale(1.1);
-    /* Memberi efek sedikit lebih besar pada kartu aktif */
+    
     z-index: 10;
-    /* Menaikkan kartu aktif ke atas */
+    
     opacity: 1;
   }
 
   .testimonial-card {
     width: 453px;
-    /* Lebar card testimoni diatur 453px */
+    
     height: 180px;
-    /* Tinggi card testimoni diatur 143px */
+    
     padding: 15px;
-    /* Padding card dikurangi */
+    
     display: flex;
     margin: auto;
     flex-direction: column;
@@ -1415,69 +1416,69 @@ a {
   .testimonial-card:hover,
   .carousel-slide.active .testimonial-card {
     background-color: #2e7d32;
-    /* Warna background saat hover atau aktif */
+    
     color: white;
-    /* Warna teks saat hover atau aktif */
+    
   }
 
   .profile {
     margin-bottom: 10px;
-    /* Margin bawah profile dikurangi */
+    
   }
 
   .profile-image {
     width: 40px;
-    /* Ukuran gambar profile diperkecil */
+    
     height: 40px;
   }
 
   .profile-info h3 {
     font-size: 14px;
-    /* Ukuran font nama profile diperkecil */
+    
   }
 
   .profile-info p {
     font-size: 12px;
-    /* Ukuran font role profile diperkecil */
+    
   }
 
   .testimonial-content {
     font-size: 14px;
-    /* Ukuran font testimoni diperkecil */
+    
     line-height: 1.4;
-    /* Tinggi baris disesuaikan */
+    
   }
 
   .carousel-buttons {
     margin: 10px 50px;
-    /* Margin tombol navigasi disesuaikan */
+    
   }
 
   .carousel-button {
     width: 35px;
-    /* Ukuran tombol navigasi diperkecil */
+    
     height: 35px;
   }
 
   .carousel-button svg {
     width: 20px;
-    /* Ukuran ikon tombol navigasi diperkecil */
+    
     height: 20px;
   }
 
   .carousel-indicators {
     margin-top: 10px;
-    /* Margin atas indikator dikurangi */
+    
   }
 
   .indicator {
     width: 6px;
-    /* Ukuran indikator diperkecil */
+    
     height: 6px;
   }
 
 
-  /* Footer */
+  
   .footer-section.brand {
     font-size: 1.5em;
   }
@@ -1500,14 +1501,14 @@ a {
 
   .hero-section {
     padding: 10px;
-    /* Padding lebih kecil */
+    
   }
 
   .container {
     flex-direction: column;
-    /* Susun elemen secara vertikal */
+    
     gap: 15px;
-    /* Jarak antar elemen */
+    
   }
 
   .left {
@@ -1517,9 +1518,9 @@ a {
   .left h1 {
     font-size: 48px;
     width: 350px;
-    /* Ukuran font lebih kecil */
+    
     margin-bottom: 15px;
-    /* Margin bawah lebih kecil */
+    
   }
 
   .trash-value-section.glass-button {
@@ -1528,7 +1529,7 @@ a {
     padding: 8px;
     font-size: 12px !important;
     margin-top: 10px;
-    /* Jarak dari gambar ke tombol */
+    
     margin-left: 90px;
   }
 
@@ -1536,67 +1537,67 @@ a {
     margin-top: 50px;
     width: 100%;
     margin-left: -105px;
-    /* Lebar penuh */
+    
   }
 
   .hero-images {
     max-width: 80%;
-    /* Gambar lebih kecil */
+    
     height: auto;
   }
 
   .shadow {
     bottom: -10px;
-    /* Posisi shadow lebih dekat */
+    
     width: 60%;
-    /* Lebar shadow lebih kecil */
+    
     height: 10px;
-    /* Tinggi shadow lebih kecil */
+    
   }
 
   .btn-group {
     flex-direction: row;
-    /* Ikon tetap dalam satu baris */
+    
     gap: 8px;
-    /* Jarak antar ikon lebih kecil */
+    
     margin-top: 10px;
-    /* Margin atas lebih kecil */
+    
   }
 
   .btn {
     padding: 8px;
-    /* Padding lebih kecil */
+    
   }
 
   .btn img {
     width: 28px;
-    /* Ukuran ikon lebih kecil */
+    
     height: 28px;
   }
 
   .btn p {
     font-size: 12px !important;
-    /* Ukuran teks lebih kecil */
+    
   }
 
   .right {
     display: none;
-    /* Sembunyikan bagian kanan */
+    
   }
 
 
 
-  /* Green Store Section */
+  
   .green-store-section .section-title {
     font-size: 32px;
     color: white;
-    /* Ukuran font lebih kecil */
+    
   }
 
   .green-store-section .section-subtitle {
     font-size: 9px;
     color: white;
-    /* Ukuran font lebih kecil */
+    
   }
 
   .leaf {
@@ -1620,7 +1621,7 @@ a {
     left: 18%;
     background-color: rgba(255, 255, 255, 0.4) !important;
     backdrop-filter: blur(4px) !important;
-    /* Efek blur */
+    
     border: none;
     border-radius: 50%;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
@@ -1642,102 +1643,102 @@ a {
 
   .manage-trash-section {
     padding: 20px 10px;
-    /* Padding lebih kecil */
+    
   }
 
   .container {
     text-align: center;
-    /* Pusatkan semua konten */
+    
   }
 
   .section-title {
     font-size: 1.8em;
-    /* Ukuran font lebih kecil */
+    
     margin-bottom: 20px;
-    /* Jarak dari judul ke gambar */
+    
   }
 
   .content-container {
     display: flex;
     flex-direction: column;
-    /* Susun elemen secara vertikal */
+    
     align-items: center;
-    /* Pusatkan elemen */
+    
     gap: 20px;
-    /* Jarak antar elemen */
+    
   }
 
   .left-manage {
     order: 2;
-    /* Gambar di urutan kedua */
+    
   }
 
   .manage-trash-image {
     max-width: 80%;
-    /* Gambar menyesuaikan lebar layar */
+    
     height: auto;
   }
 
   .right-manage {
     order: 3;
-    /* Deskripsi dan tombol di urutan ketiga */
+    
     text-align: center;
-    /* Pusatkan teks */
+    
   }
 
   .manage-trash-section .section-description {
     font-size: 18px;
-    /* Ukuran font lebih kecil */
+    
     line-height: 1.5;
     text-align: center;
     max-width: 320px;
     margin-left: -150px !important;
-    /* Tinggi baris lebih nyaman dibaca */
+    
     margin-bottom: 20px;
-    /* Jarak dari deskripsi ke tombol */
+    
   }
 
   .highlight {
     font-weight: bold;
-    /* Teks highlight lebih tebal */
+    
     color: #2E7D32;
-    /* Warna hijau untuk highlight */
+    
   }
 
   .read-article-button {
     padding: 10px 20px;
-    /* Padding tombol */
+    
     font-size: 14px;
-    /* Ukuran font tombol */
+    
     background-color: #4CAF50;
-    /* Warna latar tombol */
+    
     color: white;
     font-family: 'Montserrat';
     letter-spacing: 1.2;
-    /* Warna teks tombol */
+    
     border: none;
     border-radius: 25px;
     margin-left: -40px !important;
-    /* Sudut tombol melengkung */
+    
     cursor: pointer;
     transition: background-color 0.3s ease;
-    /* Efek hover */
+    
   }
 
   .read-article-button:hover {
     background-color: #45a049;
-    /* Warna hover tombol */
+    
   }
 
 
-  /* Trash Value Section */
+  
   .trash-value-section {
     padding: 40px 10px;
   }
 
   .trash-value-section .section-title {
     font-size: 32px;
-    /* Ukuran font lebih kecil */
+    
     max-width: 300px;
   }
 
@@ -1745,7 +1746,7 @@ a {
     font-size: 12px;
     max-width: 250px;
     text-align: center;
-    /* Pusatkan teks */
+    
     margin-bottom: 20px;
     font-weight: 300;
     margin-left: 60px;
@@ -1754,37 +1755,37 @@ a {
   .card-container {
     display: flex;
     flex-direction: column;
-    /* Susun card secara vertikal */
+    
     gap: 20px;
-    /* Jarak antar card */
+    
   }
 
   .card {
     width: 100%;
-    /* Lebar card penuh */
+    
     padding: 20px;
-    /* Padding card */
+    
     background-color: white;
-    /* Warna latar card */
+    
     border-radius: 10px;
-    /* Sudut card melengkung */
+    
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Bayangan card */
+    
   }
 
   .card-content {
     text-align: left;
-    /* Pusatkan konten card */
+    
   }
 
   .card-title {
     font-weight: 400;
     font-size: 20px;
-    /* Ukuran font judul card lebih kecil */
+    
     margin-bottom: 15px;
-    /* Jarak dari judul ke konten */
+    
     color: white;
-    /* Warna hijau untuk judul card */
+    
   }
   .card-text {
     font-size: 12px;
@@ -1794,24 +1795,24 @@ a {
     padding: 8px 16px;
     font-size: 10px;
     margin-left: 0px !important;
-    /* Ukuran font lebih kecil */
+    
   }
 
-  /* Green Store Section */
+  
   .green-store-section .card {
     width: 340px;
     height: 56px;
   }
 
-  /* Change Trash Section */
+  
   .change-trash-section .section-title {
     font-size: 1.8em;
-    /* Ukuran font lebih kecil */
+    
   }
 
   .change-trash-section .section-subtitle {
     font-size: 9px;
-    /* Ukuran font lebih kecil */
+    
   }
 
   .change-trash-section .card {
@@ -1837,118 +1838,118 @@ a {
   .change-trash-section .card h4 {
     font-size: 20px;
     margin-top: -10px;
-    /* Ukuran font lebih kecil */
+    
   }
 
   .change-trash-section .card p {
     margin-top: 10px;
     font-size: 12px;
-    /* Ukuran font lebih kecil */
+    
   }
 
-  /* Testimoni Section */
+  
   
     .testimoni-section {
-      padding: 20px 10px; /* Padding lebih kecil untuk mobile */
-      background-color: #f9f9f9; /* Warna latar section */
+      padding: 20px 10px; 
+      background-color: #f9f9f9; 
     }
   
     .container {
-      max-width: 100%; /* Lebar container penuh */
-      margin: 0 auto; /* Pusatkan container */
+      max-width: 100%; 
+      margin: 0 auto; 
     }
   
     .section-title {
-      font-size: 16px; /* Ukuran font judul lebih kecil */
-      text-align: center; /* Pusatkan judul */
-      margin-bottom: 15px; /* Jarak dari judul ke subtitle */
-      color: #2E7D32; /* Warna hijau untuk judul */
+      font-size: 16px; 
+      text-align: center; 
+      margin-bottom: 15px; 
+      color: #2E7D32; 
       font-weight: 500;
     }
   
     .section-subtitle {
-      font-size: 12px; /* Ukuran font subtitle lebih kecil */
-      text-align: center; /* Pusatkan subtitle */
-      margin-bottom: 20px; /* Jarak dari subtitle ke carousel */
-      color: #555; /* Warna teks subtitle */
+      font-size: 12px; 
+      text-align: center; 
+      margin-bottom: 20px; 
+      color: #555; 
     }
   
     .carousel-container {
       position: relative;
-      overflow: hidden; /* Sembunyikan overflow */
+      overflow: hidden; 
     }
   
     .carousel-track {
       display: flex;
-      transition: transform 0.5s ease-in-out; /* Animasi slide */
+      transition: transform 0.5s ease-in-out; 
     }
   
     .carousel-slide {
-      flex: 0 0 326px; /* Lebar card testimoni */
-      height: 150px; /* Tinggi card testimoni */
-      margin-right: 10px; /* Jarak antar card */
+      flex: 0 0 326px; 
+      height: 150px; 
+      margin-right: 10px; 
     }
   
     .testimonial-card {
-      width: 100%; /* Lebar card penuh */
-      height: 100%; /* Tinggi card penuh */
-      padding: 15px; /* Padding card */
-      background-color: white; /* Warna latar card */
-      border-radius: 10px; /* Sudut card melengkung */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan card */
+      width: 100%; 
+      height: 100%; 
+      padding: 15px; 
+      background-color: white; 
+      border-radius: 10px; 
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     }
   
     .profile {
       display: flex;
-      align-items: center; /* Pusatkan profil */
-      margin-bottom: 10px; /* Jarak dari profil ke konten */
+      align-items: center; 
+      margin-bottom: 10px; 
     }
   
     .profile-image img {
-      width: 40px; /* Ukuran gambar profil */
+      width: 40px; 
       height: 40px;
-      border-radius: 50%; /* Gambar profil bulat */
+      border-radius: 50%; 
     }
   
     .profile-info {
-      margin-left: 10px; /* Jarak dari gambar ke teks profil */
+      margin-left: 10px; 
     }
   
     .profile-info h3 {
-      font-size: 14px; /* Ukuran font nama profil */
+      font-size: 14px; 
       margin: 0;
-      color: white; /* Warna hijau untuk nama profil */
+      color: white; 
     }
   
     .profile-info p {
-      font-size: 12px; /* Ukuran font role profil */
+      font-size: 12px; 
       margin: 0;
-      color: white; /* Warna teks role profil */
+      color: white; 
     }
   
     .testimonial-content {
-      font-size: 12px; /* Ukuran font konten testimoni */
-      line-height: 1.4; /* Tinggi baris */
-      color: white; /* Warna teks konten testimoni */
+      font-size: 12px; 
+      line-height: 1.4; 
+      color: white; 
     }
   
     .carousel-indicators {
       display: flex;
-      justify-content: center; /* Pusatkan indikator */
-      margin-top: 10px; /* Jarak dari carousel ke indikator */
+      justify-content: center; 
+      margin-top: 10px; 
     }
   
     .indicator {
-      width: 8px; /* Lebar indikator */
-      height: 8px; /* Tinggi indikator */
-      background-color: #ccc; /* Warna indikator */
-      border-radius: 50%; /* Bentuk bulat */
-      margin: 0 5px; /* Jarak antar indikator */
+      width: 8px; 
+      height: 8px; 
+      background-color: #ccc; 
+      border-radius: 50%; 
+      margin: 0 5px; 
       cursor: pointer;
     }
   
     .indicator.active {
-      background-color: #4CAF50; /* Warna indikator aktif */
+      background-color: #4CAF50; 
     }
   
     .carousel-buttons {
@@ -1957,16 +1958,16 @@ a {
       left: 0;
       right: 0;
       display: flex;
-      justify-content: space-between; /* Tombol di sisi kiri dan kanan */
-      transform: translateY(-50%); /* Pusatkan tombol vertikal */
+      justify-content: space-between; 
+      transform: translateY(-50%); 
     }
   
     .carousel-button {
-      width: 30px; /* Lebar tombol */
-      height: 30px; /* Tinggi tombol */
-      background-color: rgba(255, 255, 255, 0.8); /* Warna latar tombol */
+      width: 30px; 
+      height: 30px; 
+      background-color: rgba(255, 255, 255, 0.8); 
       border: none;
-      border-radius: 50%; /* Bentuk bulat */
+      border-radius: 50%; 
       cursor: pointer;
       display: flex;
       align-items: center;
@@ -1974,13 +1975,13 @@ a {
     }
   
     .carousel-button svg {
-      width: 20px; /* Ukuran ikon tombol */
+      width: 20px; 
       height: 20px;
-      fill: #4CAF50; /* Warna ikon tombol */
+      fill: #4CAF50; 
     }
   
 
-  /* Footer */
+  
   .footer-container {
     text-align: center;
     align-items: center;
@@ -2004,94 +2005,107 @@ a {
 }
 
 @media (min-width: 1025px) {
-  /* Hero Section */
+  
   .hero-section {
-    padding: 100px 50px; /* Padding lebih besar untuk desktop */
+    padding: 100px 50px; 
   }
-
+  .recycle {
+    top: -5vh;
+    left: 390%;
+  }
+  .leaf {
+    top: -2vh;
+    left: 350%;
+  }
+  .trash {
+    left: 180%;
+  }
+  .hero-images {
+    max-width: 40vw; 
+    position: relative;
+    margin-left: 350px;
+    box-sizing: initial !important;
+  }
   .left h1 {
-    font-size: 5.5em; /* Ukuran font lebih besar untuk desktop */
+    font-size: 5.5em; 
   }
 
   .left p {
-    font-size: 1.2em; /* Ukuran font lebih besar untuk desktop */
+    font-size: 1.2em; 
   }
 
-  .hero-images {
-    max-width: 650px; /* Gambar lebih besar untuk desktop */
-    position: relative;
-  }
 
   .shadow {
-    width: 80%; /* Lebar shadow lebih besar untuk desktop */
-    height: 200px; /* Tinggi shadow lebih besar untuk desktop */
+    margin-left: 250px;
+    width: 80%; 
+    height: 200px; 
   }
 
-  /* Manage Trash Section */
+  
   .manage-trash-section {
-    padding: 100px 50px; /* Padding lebih besar untuk desktop */
+    padding: 100px 50px; 
   }
 
   .action-cta-section .section-title {
-    position: relative; /* Bisa tetap relative */
-    width: 100%; /* Mengisi lebar parent */
-    text-align: center; /* Pusatkan teks */
+    position: relative; 
+    width: 100%; 
+    text-align: center; 
 }
 
   .manage-trash-image {
-    max-width: 500px; /* Gambar lebih besar untuk desktop */
+    max-width: 500px; 
   }
 
   .section-description {
-    font-size: 1.5em; /* Ukuran font lebih besar untuk desktop */
+    font-size: 1.5em; 
   }
 
-  /* Trash Value Section */
+  
   .trash-value-section {
-    padding: 120px 50px; /* Padding lebih besar untuk desktop */
+    padding: 120px 50px; 
   }
 
   .trash-value-section .card-container {
-    gap: 30px; /* Jarak antar card lebih besar untuk desktop */
+    gap: 30px; 
   }
 
   .card-title {
-    font-size: 2.5em; /* Ukuran font judul card lebih besar untuk desktop */
+    font-size: 2.5em; 
   }
 
   .card-text {
-    font-size: 1.2em; /* Ukuran font teks card lebih besar untuk desktop */
+    font-size: 1.2em; 
   }
 
-  /* Green Store Section */
+  
   .green-store-section {
-    padding: 120px 50px; /* Padding lebih besar untuk desktop */
+    padding: 120px 50px; 
   }
 
   .green-store-section .card {
-    width: 45%; /* Lebar card lebih besar untuk desktop */
+    width: 45%; 
   }
 
-  /* Change Trash Section */
+  
   .change-trash-section {
-    padding: 120px 50px; /* Padding lebih besar untuk desktop */
+    padding: 120px 50px; 
   }
 
   .change-trash-section .card {
-    width: 45%; /* Lebar card lebih besar untuk desktop */
+    width: 45%; 
   }
 
-  /* Testimoni Section */
+  
   .testimoni-section {
-    padding: 120px 50px; /* Padding lebih besar untuk desktop */
+    padding: 120px 50px; 
   }
 
   .testimonial-card {
-    width: 600px; /* Lebar card testimoni lebih besar untuk desktop */
+    width: 600px; 
   }
 
-  /* Footer */
+  
   .footer {
-    padding: 50px; /* Padding lebih besar untuk desktop */
+    padding: 50px; 
   }
 }
