@@ -239,6 +239,8 @@ a {
 
 
 .button-content {
+  font-family: 'Montserrat';
+  letter-spacing: 1.2;
   position: relative;
   z-index: 2;
 }
@@ -411,6 +413,8 @@ a {
   font-size: 1em;
   border: none;
   border-radius: 50px;
+  font-family: 'Montserrat';
+  letter-spacing: 1.2;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
