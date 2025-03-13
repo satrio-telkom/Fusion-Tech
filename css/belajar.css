@@ -126,7 +126,6 @@ a {
   padding: 70px 30px;
   max-width: 1400px;
   color: #fff;
-  align-items: flex-start;
 }
 
 .hero-section .container {
@@ -219,14 +218,7 @@ a {
   position: relative;
 }
 
-.hero-image {
-  max-width: 650px;
-  height: auto;
-  border-radius: 10px;
-  position: relative; /* Menambahkan posisi relatif untuk gambar */
-  z-index: 2; /* Memastikan gambar berada di atas shadow */
-  bottom: 20px; /* Memindahkan gambar sedikit ke bawah */
-}
+
 .b-hero-image {
   max-width: 550px;
   height: auto;
@@ -691,18 +683,77 @@ a {
 }
 
 @media (max-width: 835px) {
-  .navbar-logo {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5em;
+  .navbar {
+    margin-left: 0;
+  }
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .navbar-link {
-    font-size: 0.75em;
+  .navbar-mobile-toggle {
+    display: block;
+    position: absolute;
+    top: 26px;
+    right: 20px;
+    transition: transform 0.3s ease;
   }
+
+  .navbar-mobile-toggle.active {
+    transform: rotate(90deg);
+  }
+
+  .navbar-menu {
+    display: block;
+    flex-direction: column;
+
+    margin-top: 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    opacity: 0;
+  }
+
+  .navbar-menu.active {
+    max-height: 300px;
+    opacity: 1;
+  }
+
+  .navbar-menu li {
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    transition-delay: 0.05s;
+  }
+
+  .navbar-menu.active li {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .navbar-menu.active li:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+  .navbar-menu.active li:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  .navbar-menu.active li:nth-child(3) {
+    transition-delay: 0.3s;
+  }
+  .navbar-menu.active li:nth-child(4) {
+    transition-delay: 0.4s;
+  }
+  .body-h::before {
+    left: 2%;
+    top: 45%;
+    width: 100%;
+  }
+ .hero-section{
+  padding: 30px 20px;
+ }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .carousel-slide {
     flex: 0 0 260px;
   }
@@ -727,9 +778,7 @@ a {
     flex-wrap: wrap;
     justify-content: center;
   }
-  .trash-eco-section {
-    padding: 50px 10px;
-  }
+
   .trash-recycle-section .section-title, .trash-eco-section .section-title, .trash-care-section .section-title, .trash-agen-section .section-title {
     font-size: 2em;
   }
@@ -753,8 +802,8 @@ a {
   .rec {
     width: 100%;
   }
-  .trash-recycle-section {
-    padding: 50px 10px;
+  .trash-recycle-section .card-container {
+    flex-direction: column;
   }
   .trash-recycle-section .card {
     width: 100%; 
@@ -773,6 +822,33 @@ a {
 
   .trash-recycle-section .card p {
     font-size: 14px; 
+  }
+  .trash-agen-section, .trash-care-section, .trash-eco-section, .trash-recycle-section {
+padding: 30px 25px;
+  }
+  .hero-section .container {
+    padding: 0px 10px; /* Mengurangi padding di mobile */
+    flex-direction: column;
+    align-items: center; /* Pusatkan konten di mobile */
+    text-align: center; /* Pusatkan teks */
+  }
+  .left-b h1 {
+    font-size: 2.5em; /* Mengurangi ukuran font untuk mobile */
+    margin-right: 0; /* Menghapus margin kanan */
+    margin-bottom: 20px; /* Mengurangi margin bawah */
+  }
+
+  .b-hero-image {
+    max-width: 100%; /* Gambar mengikuti lebar container */
+    bottom: 0; /* Menghapus posisi bottom */
+    position: static;
+  }
+
+  .shadow {
+    width: 100%; /* Mengurangi lebar shadow */
+    height: 40px; /* Mengurangi tinggi shadow */
+    bottom: -5px; /* Menyesuaikan posisi shadow */
+    filter: blur(5px); /* Mengurangi efek blur */
   }
 }
 
