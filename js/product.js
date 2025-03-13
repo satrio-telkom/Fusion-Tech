@@ -241,8 +241,8 @@ document.querySelector('.popup-image-container').addEventListener('mousemove', f
   const y = e.clientY - rect.top; // Posisi kursor vertikal
 
   // Hitung persentase posisi kursor relatif terhadap container
-  const originX = (x / container.offsetWidth) * 100;
-  const originY = (y / container.offsetHeight) * 100;
+  const originX = 100 - (x / container.offsetWidth) * 100;
+  const originY = 100 - (y / container.offsetHeight) * 100;
 
   // Simpan transform-origin terakhir
   lastTransformOrigin = `${originX}% ${originY}%`;
