@@ -1,6 +1,4 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-
 
 :root {
   --color-primary: #4caf50;
@@ -54,8 +52,6 @@ a {
   color: inherit;
 }
 
-
-
 .navbar {
   padding: 10px 20px;
   position: relative;
@@ -74,7 +70,7 @@ a {
   color: #fff;
   text-decoration: none;
   font-size: 2.5em;
-  transition: all 03.s;
+  transition: all 03s;
   width: 100px;
   margin: auto;
 }
@@ -118,13 +114,10 @@ a {
   height: 25px;
 }
 
-
 .hero-section {
+  position: relative;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 70px 30px;
-  max-width: 1400px;
+  padding: 50px 10px;
   color: #fff;
 }
 
@@ -132,10 +125,8 @@ a {
   display: flex;
 }
 
-
 .left-b {
   flex: 1;
-  padding: 0px 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -145,8 +136,9 @@ a {
   font-size: 5.5em;
   margin-top: 0px;
   margin-bottom: 30px;
-  margin-right: 100px;
   font-weight: 400;
+  word-spacing: 9999rem;
+  display: table-caption;
 }
 
 .glass-button {
@@ -157,7 +149,7 @@ a {
   font-weight: 500;
   color: white;
   text-decoration: none;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   letter-spacing: 1.2;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.15);
@@ -169,7 +161,6 @@ a {
   overflow: hidden;
 }
 
-
 .glass-button::before {
   content: "";
   position: absolute;
@@ -177,12 +168,13 @@ a {
   left: -10px;
   width: 70px;
   height: 70px;
-  background: radial-gradient(circle,
-      rgba(255, 255, 255, 0.3) 0%,
-      rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
   border-radius: 50%;
 }
-
 
 .glass-button::after {
   content: "";
@@ -205,13 +197,6 @@ a {
   transform: translateY(-2px);
 }
 
-
-.button-content {
-  position: relative;
-  z-index: 2;
-}
-
-
 .center {
   flex: 1;
   text-align: center;
@@ -222,9 +207,9 @@ a {
   max-width: 650px;
   height: auto;
   border-radius: 10px;
-  position: relative; /* Menambahkan posisi relatif untuk gambar */
-  z-index: 2; /* Memastikan gambar berada di atas shadow */
-  bottom: 20px; /* Memindahkan gambar sedikit ke bawah */
+  position: relative;
+  z-index: 2;
+  bottom: 20px;
 }
 .b-hero-image {
   max-width: 550px;
@@ -237,11 +222,11 @@ a {
 
 .shadow {
   position: absolute;
-  bottom: -10px; 
+  bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%; 
-  height: 156px; 
+  width: 100%;
+  height: 156px;
   background: radial-gradient(
     circle at center,
     rgba(255, 255, 255, 0.1) 0%,
@@ -252,52 +237,6 @@ a {
   z-index: -1;
   filter: blur(10px);
 }
-
-.btn-group {
-  position: absolute;
-  height: 430px;
-  justify-content: space-between;
-  top: 17%; 
-  left: 20%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px; 
-  z-index: 2;
-}
-
-.btn {
-  position: relative;
-  display: flex;
-  justify-content: between;
-  align-items: center;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.4);
-  filter: blur(4px);
-  border: none;
-  border-radius: 100px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  transition: 0.3s;
-  width: max-content;
-}
-
-.btn p {
-  font-size: 18px;
-  padding: 0 15px;
-}
-
-.btn img {
-  width: 48px;
-  height: 48px;
-  opacity: 1 !important;
-}
-
-.btn:hover {
-  background-color: rgba(255, 255, 255, 0.4);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-  transform: translateY(-2px);
-}
-
 
 .trash-care-section {
   background-color: #204a22;
@@ -382,7 +321,6 @@ a {
   text-align: left;
 }
 
-
 .trash-recycle-section {
   background-color: #204a22;
   color: white;
@@ -412,7 +350,7 @@ a {
 .trash-recycle-section .card-container {
   display: flex;
   gap: 20px;
-  
+
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -552,7 +490,6 @@ a {
   margin-top: 30px;
 }
 
-
 .footer {
   background-color: var(--color-background);
   color: white;
@@ -677,16 +614,16 @@ a {
     width: 400px;
   }
   .b-hero-image {
-    max-width: 100%; 
-    bottom: 0; 
+    max-width: 100%;
+    bottom: 0;
     position: static;
   }
 
   .shadow {
-    width: 100%; 
-    height: 40px; 
-    bottom: -5px; 
-    filter: blur(5px); 
+    width: 100%;
+    height: 40px;
+    bottom: -5px;
+    filter: blur(5px);
   }
   .trash-recycle-section .section-title,
   .trash-eco-section .section-title,
@@ -759,13 +696,12 @@ a {
     display: flex;
     flex-direction: row;
   }
-.trash-agen-section {
-  padding: 30px 45px 0px;
-}
+  .trash-agen-section {
+    padding: 30px 45px 0px;
+  }
 }
 
 @media (max-width: 835px) {
-  
   .navbar {
     margin-left: 0;
   }
@@ -778,8 +714,8 @@ a {
     width: 100%;
   }
   .b-hero-image {
-    max-width: 100%; /* Gambar mengikuti lebar container */
-    bottom: 0; /* Menghapus posisi bottom */
+    max-width: 100%;
+    bottom: 0;
     position: static;
   }
 }
@@ -870,24 +806,24 @@ a {
     padding: 30px 10px;
   }
   .hero-section .container {
-    padding: 0px 10px; /* Mengurangi padding di mobile */
+    padding: 0px 10px;
     flex-direction: column;
-    align-items: start; /* Pusatkan konten di mobile */
-    text-align: center; /* Pusatkan teks */
+    align-items: start;
+    text-align: center;
   }
   .left-b h1 {
-    font-size: 2.5em; /* Mengurangi ukuran font untuk mobile */
-    margin-right: 0; /* Menghapus margin kanan */
-    margin-bottom: 20px; /* Mengurangi margin bawah */
+    font-size: 2.5em;
+    margin-right: 0;
+    margin-bottom: 20px;
     width: 300px;
   }
   .trash-recycle-section .card:hover {
-    transform: none !important; /* Menghapus efek transform di mobile */
+    transform: none !important;
   }
 
   .b-hero-image {
-    max-width: 70%; /* Gambar mengikuti lebar container */
-    bottom: 0; /* Menghapus posisi bottom */
+    max-width: 70%;
+    bottom: 0;
     position: static;
   }
   .center {
@@ -895,13 +831,18 @@ a {
   }
 
   .shadow {
-    width: 100%; /* Mengurangi lebar shadow */
-    height: 40px; /* Mengurangi tinggi shadow */
-    bottom: -5px; /* Menyesuaikan posisi shadow */
-    filter: blur(5px); /* Mengurangi efek blur */
+    width: 100%;
+    height: 40px;
+    bottom: -5px;
+    filter: blur(5px);
+  }
+  .left-b h1 {
+    font-size: 42px;
+    width: 330px;
+    margin-bottom: 15px;
+    word-spacing: normal;
   }
 }
-
 
 @media (max-width: 576px) {
   .navbar-container {

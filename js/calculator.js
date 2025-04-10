@@ -103,6 +103,36 @@ function closeModal() {
     document.getElementById("popup-modal").style.display = "none";
 }
 
+// Menambahkan event listener untuk kategori
+const categories = document.querySelectorAll('.category');
+categories.forEach(category => {
+  category.addEventListener('click', function() {
+    // Menghapus kelas aktif dari semua kategori
+    categories.forEach(c => c.classList.remove('active'));
+    
+    // Menambahkan kelas aktif ke kategori yang dipilih
+    this.classList.add('active');
+    
+    // Mengatur tarif dan nama kategori baru
+    currentCategoryName = this.getAttribute('data-name');
+    
+    // Mengambil nilai harga dari teks kategori
+    const priceText = this.querySelector('span:last-child').textContent;
+    const rateMatch = priceText.match(/Rp\s*([\d.,]+)\/kg/);
+    if (rateMatch && rateMatch[1]) {
+      // Mengonversi teks harga ke angka
+      currentRate = parseFloat(rateMatch[1].replace(/\./g, '').replace(',', '.'));
+    }
+    
+    // Memperbarui nama kategori yang dipilih
+    document.getElementById("selected-category").textContent = currentCategoryName;
+    
+    // Menghitung ulang harga
+    calculatePrice();
+  });
+});
+
+
 // Event listener for keyboard input
 document.addEventListener("keydown", function(event) {
     const key = event.key;
