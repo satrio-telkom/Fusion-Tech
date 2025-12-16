@@ -6,9 +6,14 @@ document.querySelectorAll(".card").forEach((card) => {
     if (content.style.maxHeight) {
       content.style.maxHeight = null;
       dropdown.style.display = "block";
+      this.classList.remove("active");
     } else {
-      document.querySelectorAll(".accordion-content").forEach((item) => {
-        item.style.maxHeight = null;
+      document.querySelectorAll(".card").forEach((item) => {
+        item.classList.remove("active");
+        const itemContent = item.querySelector(".accordion-content");
+        if (itemContent) {
+          itemContent.style.maxHeight = null;
+        }
       });
 
       document.querySelectorAll(".ddown").forEach((icon) => {
@@ -17,6 +22,7 @@ document.querySelectorAll(".card").forEach((card) => {
 
       content.style.maxHeight = content.scrollHeight + "px";
       dropdown.style.display = "none";
+      this.classList.add("active");
     }
   });
 });
